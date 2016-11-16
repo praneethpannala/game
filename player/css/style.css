@@ -1,0 +1,31 @@
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+	text-align:center;
+	margin-top:2%; 
+}
+
+
+.div2 {
+    width: 50%;
+    height: auto;
+    border: 1px solid red;
+}
+
+.divbackground
+{
+	background-color:blue;
+}
+
+.background
+{
+	background-color:red;
+}
+
+.players
+{
+	text-align:center;
+}
