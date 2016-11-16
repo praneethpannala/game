@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<!--importing the JS files and CSS files-->
+	    <script src="angular.min.js"></script>		
+		<script src="backend.js"></script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	</head>
+	
+	<body ng-app="myApp">
+		<!--controller-->
+		<div ng-controller="addingemployee">
+		   
+		   <!--For importing the .CSV file -->
+			<input type="file" on-read-file="showContent($fileContent)" accept=".csv">
+			
+			<br><br><br>
+			
+			<!--Buttons for viewing,entering and exporting the data-->
+		   <button type="button" ng-click="allemp()"> View Employees </button> &nbsp;&nbsp;
+		   <button type="button" ng-click="enter()"> Enter Details </button> <br><br><br>
+		   <button type="button" ng-click="export()"> Export </button> <br><br><br>
+			
+			<!--for viewing and modify of data-->
+		   <div ng-show="viewlist" class="w3-container">
+			   <!--Tabular view of the data-->
+			   <div>
+				   <table class="w3-table-all w3-hoverable">
+						<tr>
+							<th>Employee Name</th>
+							<th>Employee ID</th>
+							<th>Company</th>
+							<th>Contact</th>
+							<th>Modify</th>
+						</tr>
+
+						<tr ng-repeat="x in employees">
+							<td> {{ x.name }} </td>
+							<td> {{ x.empid }} </td>
+							<td> {{ x.company}} </td>
+							<td> {{ x.contact}} </td>
+							<td><button type="button" ng-click="delete(x.name)">Delete</button> <br><br>
+							<button type="button" ng-click="editempdetails($index)"> Edit </button></td>
+						</tr>
+					</table>
+				</div>
+				<!--Modifing the specific data-->
+				<div ng-show="show">
+					Employee name: <input type="text" ng-model="name"> <br><br>
+				   Employee ID: <input type="number" ng-model="empid"> <br><br>
+				   Employee Organisation: <input type="text" ng-model="company"> <br><br>
+				   Employee Phone number: <input type="number" ng-model="contact"> <br><br>
+				   Employee Location: <input type="text" ng-model="location"> <br><br>
+					<button type="button" ng-click="saveempdetails()" >Save</button><!--to modify employee details-->
+				</div>
+					
+							
+			</div> <br><br>
+			<!--Entering new employee details-->			
+			<div ng-show="enterdetails">
+				<div>
+				   Employee name: <input type="text" ng-model="name"> <br><br>
+				   Employee ID: <input type="number" ng-model="empid"> <br><br>
+				   Employee Organisation: <input type="text" ng-model="company"> <br><br>
+				   Employee Phone number: <input type="number" ng-model="contact"> <br><br>
+				   Employee Location: <input type="text" ng-model="location"> <br><br>
+			   </div> <br><br>
+				<button type="button" ng-click="addemp()"> Submit</button>
+				
+			</div>	
+		
+		</div>
+	
+	
+	</body>
+
+</html>
+
+

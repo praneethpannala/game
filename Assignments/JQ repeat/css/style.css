@@ -1,0 +1,32 @@
+.div2 {
+    
+    background-image:url("../images/image1.jpg");
+	background-size: auto;
+	width:80%;
+	height:auto;
+	text-align:center;
+	margin-left:60px;
+	margin-top:60px;
+	opacity: 1;
+	
+}
+
+.div1,.div3{
+    width: 100px;
+    height: 100px;
+	display: inline-block;
+    margin: 40px;
+	padding:4%;
+	opacity: 0.5;
+	background-image:url("../images/image2.jpg");
+	background-size: auto;
+
+}
+
+.div1:hover,.div3:hover
+{
+	opacity: 1;
+	
+}
+
+
