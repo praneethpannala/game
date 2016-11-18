@@ -7,7 +7,7 @@ function gameClick(){
 	
 	if(player1){
 		$("#11").removeClass("divbackground");
-		$("#"+value).addClass("divbackground");
+		$("#"+value).css("background-color","blue");
 		$("#22").addClass("background");
 		$("#"+value).text("PlayerOne")
 		
@@ -15,7 +15,7 @@ function gameClick(){
 	if(player2){
 		$("#11").addClass("divbackground");
 		$("#22").removeClass("background");
-		$("#"+value).addClass("background");
+		$("#"+value).css("background-color","red");
 		$("#"+value).text("PlayerTwo")
 		
 	}
@@ -27,10 +27,7 @@ function gameClick(){
 
 $(document).ready(function()
 {
-	
-	$("#1").on("click",gameClick);
-	$("#2").on("click",gameClick);
-	$("#3").on("click",gameClick);
-	$("#4").on("click",gameClick);
+	//$(".floating").one("click",gameClick);
+	$(".players").delegate(".floating", "click",gameClick);
 	
 });

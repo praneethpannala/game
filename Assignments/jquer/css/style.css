@@ -1,0 +1,48 @@
+/*for video masking*/
+#container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+/*for video frame and masked button*/
+#navi,
+#infoi {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: -10;
+}
+/*video region*/
+.videoarea
+{
+	width:200px;
+	height:200px;
+	position:relative;
+	float:left;
+	margin-left:20px;
+}
+/*masked button*/
+.videobutton
+{
+	width:200px;
+	height:200px;
+	float:left;
+	background:transparent;
+}
+/*content surrounding for all the videos*/
+.videocontentregion
+{
+	margin:5% 5% 5% 5%;
+	float:left;
+}
+/*carousel*/
+.carousel-inner > .item > img,
+	  .carousel-inner > .item > a > img {
+		  width: 70%;
+		  margin: auto;
+	  }
+
+
+
+

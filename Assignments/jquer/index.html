@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
+	<!--Importing JS and CSS files-->
 	<head>
-	  <title>Bootstrap Example</title>
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="backend.js"></script>
-	 <style>
-	  .carousel-inner > .item > img,
-	  .carousel-inner > .item > a > img {
-		  width: 70%;
-		  margin: auto;
-	  }
-	  </style>
+		<title>Bootstrap Example</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="./js/backend.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
 	</head>
 	<body>
-
+	<br>
 	<div class="container">
-
+		<!--Navigation bar-->
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand active home">Home</a>
+			  
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar"  >
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a class="space">Space</a></li>
+				<li><a class="technology">Technology</a></li>
+				<li><a class="nature">Nature</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+	
 		<br>
-		
-		<ul class="nav nav-tabs">
-			<li class="active" ><a class="home">Home</a></li>
-			<li style="float:right"><a class="space">Space</a></li>
-			<li style="float:right"><a class="technology">Technology</a></li>
-			<li  style="float:right"><a class="nature">Nature</a></li>
-		</ul>
-
-		<br>
-		
+		<!--Other pages will be loaded here-->
 		<div class="loader"></div>	
 		
 	 </div> 

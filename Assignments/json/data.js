@@ -1,5 +1,10 @@
 [
-    {"firstName":"Deepika", "lastName":"Padam", "empId":"30032"},
-    {"firstName":"Vaishnavi", "lastName":"Reddycharla", "empId":"30022"},
-    {"firstName":"Praneeth", "lastName":"Pannala","empId":"30030"}
+	{"FirstName":"Praneeth", "LastName":"Pannala","EmpID":30030,"Company":"Innominds"},
+	
+    {"FirstName":"Deepika", "LastName":"Padam", "EmpID":30032,"Company":"Google"},
+	
+    {"FirstName":"Vaishnavi", "LastName":"Reddycharla","EmpID":30022,"Company":"Mircosoft"},
+	
+	{"FirstName":"Vaishnavi", "LastName":"Reddycharla", "EmpID":30022,"Company":"DELL"}
+    
 ]
