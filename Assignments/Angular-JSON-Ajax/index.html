@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="backend.js"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="card-deck-wrapper" style="text-align: center">
+			<div class="card-deck">
+				<div class="card card-block " ng-repeat="x in names" style="width: 18rem;background-color: Bisque;display: inline-block;margin: 10px">
+					
+						<p>Name:{{x.FirstName}}</p>
+						<p>Salary:{{x.Salary}}</p>
+						<p>Age:{{x.Age}}</p>
+						<p>Experience:{{x.Experience}}</p>
+				
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+	</body>
+
+</html>
