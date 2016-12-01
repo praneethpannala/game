@@ -9,25 +9,14 @@
 		<script src="backend.js"></script>
 	</head>
 
-	<body ng-app="myApp" ng-controller="myCtrl">
-		<div class="card-deck-wrapper" style="text-align: center">
-			<div class="card-deck">
-				<div class="card card-block " ng-repeat="x in names" style="width: 18rem;background-color: Bisque;display: inline-block;margin: 10px">
-					
-						<p>Name:{{x.FirstName}}</p>
-						<p>Salary:{{x.Salary}}</p>
-						<p>Age:{{x.Age}}</p>
-						<p>Experience:{{x.Experience}}</p>
-				
-				</div>
-			</div>
-
+	<body ng-app="myApp">
+		
+		<div ng-controller="nameCtrl">
+			<my-json names ='names' eliminate="delete($index)"></my-json>
 		</div>
-
-
-
-
-
+		<div ng-controller="adminCtrl">
+			<my-json names ='names' eliminate="delete($index)"></my-json>
+		</div>
 
 	</body>
 

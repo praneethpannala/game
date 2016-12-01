@@ -1,0 +1,22 @@
+<div class="card-deck-wrapper" style="text-align: center">
+		<div class="card-deck">
+			<div class="card card-block " ng-repeat="x in names" style="width: 18rem;background-color: Bisque;display: inline-block;margin: 10px">
+					
+					<p>Name:{{x.FirstName}}</p>
+					<p>Salary:{{x.Salary}}</p>
+					<p>Age:{{x.Age}}</p>
+					<p>Experience:{{x.Experience}}</p>
+					<button type="button" ng-click="eliminate">Delete</button>
+			
+			</div> <br>
+			<!--
+			<div class="card card-block " ng-repeat="x in admin" style="width: 18rem;background-color: Bisque;display: inline-block;margin: 10px">
+				
+					<p>Name:{{x.FirstName}}</p>
+					<p>Salary:{{x.Location}}</p>
+					<p>Age:{{x.Designation}}</p>
+					<button type="button" ng-click="delete(FirstName)">Delete</button>
+			
+			</div> -->
+		</div>
+</div>			
