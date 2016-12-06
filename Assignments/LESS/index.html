@@ -10,8 +10,8 @@
 	</head>
 
 	<body ng-app="myApp" ng-controller="myCtrl">
-		<table class="table table-hover ">
-			<thead class="backgrounds">
+		<table class="tablebackground">
+			<thead>
 		      <tr>
 		        <th ng-click="orderBy('alpha')">Row 1</th>
 		        <th ng-click="orderBy('number')">Row 2</th>
@@ -19,7 +19,7 @@
 		        <th ng-click="orderBy('link')">Row 4</th>
 		      </tr>
 			</thead>
-			<tfoot class="backgrounds">
+			<tfoot>
 		      <tr>
 		        <th ng-click="orderBy('alpha')">Row 1</th>
 		        <th ng-click="orderBy('number')">Row 2</th>
@@ -28,13 +28,13 @@
 		      </tr>
 			</tfoot>
 			<tbody>
-				<tr>
+				<tdata>
 					<td><input type="text" ng-model="alpha"></td>
 					<td><input type="text" ng-model="num"></td>
 					<td><input type="text" ng-model="animal"></td>
 					<td><input type="text" ng-model="site"></td>
 
-				</tr>
+				</tdata>
 				<tr ng-repeat="x in records | filter: {alpha:alpha,number:num,animal:animal,site:site} | orderBy:myOrderBy">
 					<td>{{x.alpha}}</td>
 					<td>{{x.number}}</td>
@@ -46,6 +46,5 @@
 		</table>	
 		
 	</body>
-
 
 </html>
