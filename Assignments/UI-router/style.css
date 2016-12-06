@@ -1,0 +1,44 @@
+.navbar-fixed-left {
+  width: inherit;
+  position: fixed;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+ text-align: center;
+  position: relative;
+
+  font-size: 20px;
+}
+
+.container-fluid{
+	margin-left: none;
+}
+
+.glyphicon {
+    font-size: 30px;
+}
+
+ul {
+	margin-top: 20px;
+}
+
+li:hover{
+	background-color: black;
+}
+
+body{
+	background-color: black;
+	color: white;
+}
+
+.image
+{
+	margin-left: 15%;
+}
+
+.mydata
+{
+	margin-right: 10%
+}

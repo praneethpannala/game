@@ -1,0 +1,36 @@
+{
+   "home":{
+    "image": "mypic.jpeg",
+    "name": "Praneeth Kumar",
+    "profession": "S/E",
+	"email":"praneeth.pannala@gmail.com",
+    "about":"Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+     
+  },
+  
+    "education":[
+      {
+       "standard":"b.tech",
+       "group":"ECE",
+       "college":"Vignan",
+       "percentage":"68",
+       "yearofpassing":"2015"
+      },
+      {
+       "standard":"intermediate",
+       "group":"M.P.C",
+       "college":"Narayana",
+       "percentage":"69",
+       "yearofpassing":"2011"
+      },
+      {
+       "standard":"Tenth Class",
+       "group":"SSC",
+       "college":"St.Anthonys",
+       "percentage":"98",
+       "yearofpassing":"2009"
+      }],
+   "skills":["C","JAVA","Angular","Testing","SQL"],
+   "interests":["Cricket","Music","BasketBall","Chess"]
+  
+}
