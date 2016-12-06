@@ -1,15 +1,22 @@
 
 <div>
 	<nav-bar></nav-bar> <br><br>
-	<div class="image">
-		<img class="col-md-4 col-sm-4 col-xs-4 imageborder" style="width="534" height="434";" ng-src="{{home.image}}"> 
-	</div>
-	<div class="mydata">
-		<h1>Name:{{home.name}}</h1>
-		<p>Profession:{{home.profession}}</p>
-		<p>Email: {{home.email}}</p>
-		<p>{{home.about}}</p>
-	</div> <br>
+	
+	<div class="table-responsive">          
+	  <table class="table" style="width: 50%;margin-left: 20%">
+	    <tbody ng-repeat="x in education">
+	      <tr>
+	         <td>{{x.college}}</td>
+	        <td>{{x.group}}</td>
+
+	       
+	        <td>{{x.percentage}}</td>
+	        <td>{{x.standard}}</td>
+	        <td>{{x.yearofpassing}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+  </div>
 	
 
 </div>

@@ -1,8 +1,15 @@
-<div class="navbar navbar-inverse navbar-fixed-left">
-	  <ul class="nav navbar-nav">
-	   <li><a ui-sref="home"> <span class="glyphicon glyphicon-home"></span><br>Home </a></li>
-	   <li><a ui-sref="education"><span class="glyphicon glyphicon-education"></span><br>Education</a></li>
-	   <li><a ui-sref="skills"><span class="glyphicon glyphicon-wrench"></span><br>Skills</a></li>
-	   <li><a ui-sref="interests"><span class="glyphicon glyphicon-eye-open"></span><br>Interests</a></li>
-	  </ul>
+<div class="col-sm-3">
+	<div class="navbar navbar-inverse navbar-fixed-left">
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="home.details"> <span class="glyphicon glyphicon-home"></span><br>Home </a></li>
+			<li><a ui-sref="home.education"><span class="glyphicon glyphicon-education"></span><br>Education</a></li>
+			<li><a ui-sref="home.skills"><span class="glyphicon glyphicon-wrench"></span><br>Skills</a></li>
+			<li><a ui-sref="home.interests"><span class="glyphicon glyphicon-eye-open"></span><br>Interests</a></li>
+		</ul>
+	</div>
 </div>
+
+<div class="image">
+		<img class="col-md-4 col-sm-4 col-xs-4 imageborder" style="width="534" height="434";" ng-src="{{home.image}}"> 
+</div>
+

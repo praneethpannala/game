@@ -11,8 +11,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
     .state('home', {
         url: '/home',
-        templateUrl: 'home.html',
-        controller: 'info'
+        templateUrl: 'navbar.html',
+    	controller: 'info'
     })
 
     .state('education', {
@@ -36,21 +36,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
 app.controller('info',function(myService,$scope,$rootScope)
 	{
-		$rootScope.data="";
-		console.log(this);
+	
 		myService.myfunc(myFun,"myjson.json");
-		$scope.home="";
+		$scope.home,$scope.education,$scope.skills,$scope.interests="";
 		function myFun(data)
 		{		
-			console.log(data);	
-			$rootScope.data= data.home;
-			$scope.home= data.home;
-			console.log($scope.home);
+			$scope.home= data.home;	
+			$scope.education= data.education;
+			$scope.skills= data.skills;
+			$scope.interests= data.interests;
+			console.log($scope.education);
+			
 		}	
 
-		$scope.education= $rootScope.education;
-		$scope.skills- $rootScope.skills;
-		$scope.interests= $rootScope.interests;
 
 	});	
 
