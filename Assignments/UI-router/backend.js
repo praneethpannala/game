@@ -11,22 +11,28 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
     .state('home', {
         url: '/home',
-        templateUrl: 'navbar.html',
+        templateUrl: 'home.html',
     	controller: 'info'
     })
 
-    .state('education', {
+    .state('home.details', {
+        url: '/details',
+        templateUrl: 'details.html',
+    	controller: 'info'
+    })
+
+    .state('home.education', {
         url: '/education',
         templateUrl: 'education.html',
         controller: 'info'
     })
 
-	.state('skills', {
+	.state('home.skills', {
 	        url: '/skills',
 	        templateUrl: 'skills.html',
           controller: 'info'
    })
-	.state('interests', {
+	.state('home.interests', {
 	        url: '/interests',
 	        templateUrl: 'interests.html',
             controller: 'info'

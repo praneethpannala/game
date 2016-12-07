@@ -1,22 +1,25 @@
-
-<div>
-	<nav-bar></nav-bar> <br><br>
 	
-	<div class="table-responsive">          
-	  <table class="table" style="width: 50%;margin-left: 20%">
-	    <tbody ng-repeat="x in education">
-	      <tr>
-	         <td>{{x.college}}</td>
-	        <td>{{x.group}}</td>
-
-	       
-	        <td>{{x.percentage}}</td>
-	        <td>{{x.standard}}</td>
-	        <td>{{x.yearofpassing}}</td>
-	      </tr>
-	    </tbody>
-	  </table>
-  </div>
-	
-
+<div class="cards col-md-4">
+	<h3>Academics</h3>
+  <table class="table">
+  	<thead>
+      	<tr>
+      		<th>College</th>
+     		<th>Group</th>
+      		<th>%</th>
+      		<th>Standard</th>
+      		<th>Year of Passing</th>
+      	</tr>
+    </thead>
+    <tbody ng-repeat="x in education">
+      <tr>
+		<td>{{x.college}}</td>
+		<td>{{x.group}}</td>
+		<td>{{x.percentage}}</td>
+		<td>{{x.standard}}</td>
+		<td>{{x.yearofpassing}}</td>
+      </tr>
+    </tbody>
+  </table>		
 </div>
+

@@ -1,15 +1,10 @@
 
-<div>
-	<nav-bar></nav-bar> <br><br>
-	<div class="image">
-		<img class="col-md-4 col-sm-4 col-xs-4 imageborder" style="width="534" height="434";" ng-src="{{home.image}}"> 
-	</div>
-	<div class="mydata">
-		<h1>Name:{{home.name}}</h1>
-		<p>Profession:{{home.profession}}</p>
-		<p>Email: {{home.email}}</p>
-		<p>{{home.about}}</p>
-	</div> <br>
-	
 
+<div class="cards col-md-4">
+  <div class="containing">
+  		<h3>Skills</h3> <br>
+		  	<dd ng-repeat="x in skills"> 
+		  		<p>- {{x}}</p>
+		  	</dd>
+  </div>
 </div>
