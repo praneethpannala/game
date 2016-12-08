@@ -1,0 +1,23 @@
+<div class="cards col-md-4">
+  <div class="containing">
+  	<h3>Friends List</h3>
+	<table class="table">
+	  	<thead>
+	      	<tr>
+	      		<th>FirstName</th>
+	     		<th>Salary</th>
+	      		<th>Age</th>
+	      		<th>Experience</th>
+	      	</tr>
+	    </thead>
+	    <tbody ng-repeat="x in friends">
+	      <tr>
+			<td>{{x.FirstName}}</td>
+			<td>{{x.Salary}}</td>
+			<td>{{x.Age}}</td>
+			<td>{{x.Experience}}</td>
+	      </tr>
+	    </tbody>
+	  </table>			
+  </div>
+</div>

@@ -1,6 +1,6 @@
 {
    "home":{
-    "image": "mypic.jpg",
+    "image": "../images/mypic.jpg",
     "name": "Praneeth Kumar",
     "profession": "S/E",
 	"email":"praneeth.pannala@gmail.com",
