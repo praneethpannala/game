@@ -1,25 +1,44 @@
-	
-<div class="cards col-md-4">
-	<h3>Academics</h3>
-  <table class="table">
-  	<thead>
-      	<tr>
-      		<th>College</th>
-     		<th>Group</th>
-      		<th>%</th>
-      		<th>Standard</th>
-      		<th>Year of Passing</th>
-      	</tr>
-    </thead>
-    <tbody ng-repeat="x in education">
-      <tr>
-		<td>{{x.college}}</td>
-		<td>{{x.group}}</td>
-		<td>{{x.percentage}}</td>
-		<td>{{x.standard}}</td>
-		<td>{{x.yearofpassing}}</td>
-      </tr>
-    </tbody>
-  </table>		
-</div>
+<div class="row">
+    <div class="cards col-md-4 flip-card">
+    <h3>Academics</h3>
 
+    <div class="front">
+        <table  class="table">
+          <thead>
+              <tr>
+                <th>College</th>
+              <th>Group</th>
+                <th>%</th>
+                <th>Standard</th>
+                <th>Year of Passing</th>
+              </tr>
+          </thead>
+          <tbody ng-repeat="x in education">
+            <tr>
+          <td>{{x.college}}</td>
+          <td>{{x.group}}</td>
+          <td>{{x.percentage}}</td>
+          <td>{{x.standard}}</td>
+          <td>{{x.yearofpassing}}</td>
+            </tr>
+          </tbody>
+        </table>    
+    </div>
+
+    <div class="back">
+        <h3> Progress Bar</h3>
+        <div ng-repeat="x in education">
+            <div class="progress">
+              <div class="progress-bar  progress-bar-striped" role="progressbar"  style="width:{{x.percentage}}%">
+                 {{x.percentage}} {{x.standard}}
+              </div>
+             </div>
+        </div>
+        
+    </div>
+
+  </div>
+
+  
+
+</div>	

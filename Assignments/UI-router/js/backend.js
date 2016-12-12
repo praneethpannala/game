@@ -47,10 +47,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
  }]); 
 
-app.controller('info',function(myService,$scope,$rootScope,$q)
+app.controller('info',function(myService,$scope,$rootScope,$q,myFactory)
 	{
 		$scope.home,$scope.education,$scope.skills,$scope.interests="";
-
+		$scope.name="";
+		$scope.sal="";
+		$scope.age="";
+		$scope.exp="";
 		var myjson= myService.myfunc("../js/myjson.json");
 		var	friends= myService.myfunc("../js/friends.json");
 
@@ -67,6 +70,17 @@ app.controller('info',function(myService,$scope,$rootScope,$q)
 			function(error){
 				console.log(error);
 			});
+
+		$scope.newfriend= function(){
+			var z= myFactory.newFrnd($scope.name,$scope.sal,
+			 	$scope.age,$scope.exp);
+			$scope.friends.push(z);
+
+
+		}
+			
+		
+
 	
 	});	
 
@@ -85,6 +99,22 @@ app.service('myService',function($http,$q)
 		}
 
 	});
+
+app.factory('myFactory',function(){
+		
+		var newFrnd= function(name,sal,age,exp){
+			var obj={};
+			obj.FirstName= name;
+			obj.Salary= sal;
+			obj.Age= age;
+			obj.Experience= exp;
+			console.log(obj);
+			return obj;
+		}
+		
+		return {newFrnd : newFrnd};
+	});
+
 
 app.directive('navBar',function(){
 	return{
