@@ -1,12 +1,11 @@
 
 <div>
-	<nav-bar></nav-bar> <br><br>
-
-	<div class="image" style="margin-left: 25%">
-			<img ng-src='{{home.image}}' class="col-md-5 col-sm-5 col-xs-5 imageborder" height="434" > 
-	</div> <br>
-
-	<div ui-view></div>
-
+	<div class="col-md-3 col-xs-8">
+		<nav-bar></nav-bar>
+	</div> <br><br>
+		<div> 
+			<img ng-src='{{home.image}}' class="col-md-3 imageborder" height="434" > <br>
+			<div class="col-md-6" ui-view></div>
+		</div>
 </div>
 

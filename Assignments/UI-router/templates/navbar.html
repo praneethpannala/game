@@ -1,14 +1,24 @@
-<div class="col-sm-3">
+<div class="col-xs-12 col-sm-8 col-md-10" style="height: 100%">
 	<div class="navbar navbar-inverse navbar-fixed-left">
-		<ul class="nav navbar-nav" style="margin-left: 15px">
-			<br><br>
-		
-			<li><a ui-sref="home.details"> <span class="glyphicon glyphicon-home"></span><br>Home </a></li>
-			<li><a ui-sref="home.education"><span class="glyphicon glyphicon-education"></span><br>Education</a></li>
-			<li><a ui-sref="home.skills"><span class="glyphicon glyphicon-wrench"></span><br>Skills</a></li>
-			<li><a ui-sref="home.interests"><span class="glyphicon glyphicon-eye-open"></span><br>Interests</a></li>
-			<li><a ui-sref="home.friends"><span class="glyphicon glyphicon-globe"></span><br>Friends</a></li>
-		</ul>
+
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	    </button>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<br><br>
+			
+				<li><a ui-sref="home.details"> <span class="glyphicon glyphicon-home"></span><br>Home </a></li>
+				<li><a ui-sref="home.education"><span class="glyphicon glyphicon-education"></span><br>Education</a></li>
+				<li><a ui-sref="home.skills"><span class="glyphicon glyphicon-wrench"></span><br>Skills</a></li>
+				<li><a ui-sref="home.interests"><span class="glyphicon glyphicon-eye-open"></span><br>Interests</a></li>
+				<li><a ui-sref="home.friends"><span class="glyphicon glyphicon-globe"></span><br>Friends</a></li>
+			</ul>
+		</div>
+
 	</div>
 </div> 
 

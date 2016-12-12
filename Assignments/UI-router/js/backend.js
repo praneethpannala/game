@@ -47,7 +47,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
  }]); 
 
-app.controller('info',function(myService,$scope,$rootScope,$q,myFactory)
+app.controller('info',function(myService,$scope,$q,myFactory)
 	{
 		$scope.home,$scope.education,$scope.skills,$scope.interests="";
 		$scope.name="";
