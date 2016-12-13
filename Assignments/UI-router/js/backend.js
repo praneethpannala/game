@@ -117,6 +117,7 @@ app.factory('myFactory',function(){
 
 
 app.directive('navBar',function(){
+	console.log(this);
 	return{
 		restrict: 'E',
 		templateUrl: '../templates/navbar.html'

@@ -4,7 +4,6 @@ var app= angular.module('myApp',[]);
 
 app.controller('nameCtrl',function($scope,myService)
 	{
-		console.log(this);
 		$scope.names="";
 		function myFun(data)
 		{
@@ -15,7 +14,7 @@ app.controller('nameCtrl',function($scope,myService)
 
 
 		$scope.delete= function(i){
-			console.log("sffvsd");
+			
 			$scope.names.splice(i, 1);
 		};
 	});
@@ -25,14 +24,12 @@ app.controller('adminCtrl',function($scope,myService)
 		$scope.names="";
 		function myFun(data)
 		{
-			console.log(data);
 			$scope.names= data;
 		}
 
 		myService.myfunc(myFun,"jsondata2.json");
 
 		$scope.delete= function(i){
-			console.log(i);
 			$scope.names.splice(i, 1);
 		};
 	});
