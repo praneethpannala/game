@@ -59,13 +59,11 @@ app.controller('info',function(myService,$scope,$q,myFactory)
 
 		$q.all([myjson,friends]).then(
 			function(data){
-				console.log(data);
 				$scope.home= data[0].home;	
 				$scope.education= data[0].education;
 				$scope.skills= data[0].skills;
 				$scope.interests= data[0].interests;
 				$scope.friends= data[1];
-				console.log($scope.friends);
 			},
 			function(error){
 				console.log(error);
@@ -108,7 +106,6 @@ app.factory('myFactory',function(){
 			obj.Salary= sal;
 			obj.Age= age;
 			obj.Experience= exp;
-			console.log(obj);
 			return obj;
 		}
 		
