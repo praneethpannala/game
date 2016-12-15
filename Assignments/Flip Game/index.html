@@ -1,39 +1,43 @@
 <html>
+
 	<head>
-		
 		<link rel="stylesheet" href="bootstrap.css">
 		<link rel="stylesheet" href="style.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
 	</head>
-	<body ng-app="myApp" ng-controller="myCtrl">
+
+	<body class="container" ng-app="myApp" ng-controller="myCtrl">
 		<div>
-			
-
-		</div>	
-
-		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-			<div class="flipper">
-				<div class="front">
-					gdbf
-					<!-- front content -->
-				</div>
-				<div class="back">
-					babbu
-					<!-- back content -->
-				</div>
+			 <div class="box"  >
+				<div class="front" id="1" ng-click="element($event)"> Click me</div>
+				<div class="back">babbu</div>
+			</div>
+    
+			<div class="box">
+				<div class="front" id="2" ng-click="element($event)"> Click me</div>
+				<div class="back">babbu</div>
+			</div>
+			<div class="box" id="3" ng-click="element($event)">
+				<div class="front" ng-style="myObj"> Click me	</div>
+				<div class="back" ng-style="normal">babbu</div>
+			</div>
+			<div class="box" id="4" ng-click="element($event)">
+				<div class="front" ng-style="myObj"> Click me	</div>
+				<div class="back" ng-style="normal">babbu</div>
+			</div>
+			<div class="box" id="5" ng-click="element($event)">
+				<div class="front" ng-style="myObj"> Click me	</div>
+				<div class="back" ng-style="normal">babbu</div>
+			</div>
+			<div class="box" id="6" ng-click="element($event)">
+				<div class="front" ng-style="myObj"> Click me	</div>
+				<div class="back" ng-style="normal">babbu</div>
 			</div>
 		</div>
-
-
-
-
-
-
 
 		<script type="text/javascript" src="backend.js"></script>
 
 	</body>
-
 
 </html>
