@@ -23,6 +23,7 @@
 }
 .front,
 .back {
+  position: absolute;
   transition: -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;

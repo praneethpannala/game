@@ -43,6 +43,9 @@ app.directive("flip", function(){
       
       
       function showFront(){
+        console.log(self.front);
+        console.log(self.front);
+
         self.front.removeClass("flipHideFront");
         self.back.addClass("flipHideBack");
       }
@@ -53,6 +56,7 @@ app.directive("flip", function(){
       }
       
       self.init = function(){
+
         self.front.addClass("flipBasic");
         self.back.addClass("flipBasic");
         
@@ -69,6 +73,7 @@ app.directive("flip", function(){
         height =  attrs.flipHeight || "100px";
       
       element.addClass("flip");
+     
       
       if(ctrl.front && ctrl.back){
         [element, ctrl.front, ctrl.back].forEach(function(el){
@@ -91,6 +96,9 @@ app.directive("flipPanel", function(){
     require : "^flip",
     //transclusion : true,
     link: function(scope, element, attrs, flipCtr){
+      console.log(flipCtr.front);
+      console.log(flipCtr.back);
+      
       if(!flipCtr.front) {flipCtr.front = element;}
       else if(!flipCtr.back) {flipCtr.back = element;}
       else {
