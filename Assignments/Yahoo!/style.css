@@ -1,0 +1,18 @@
+.navbar-nav > li > a {
+	padding-top:1px !important; 
+	padding-bottom:1px !important;
+}
+.navbar {
+	min-height:12px !important
+}
+
+.carousel-data{
+	position:absolute;
+	margin-top: 40%;
+	width: 95%!important;
+    height: 100px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-color: #fff;
+ 	opacity: 0.7;
+}
