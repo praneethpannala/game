@@ -1,71 +1,71 @@
 [
   {
-   "picture": "google.png",
+   "picture": "../images/google.png",
    "value": 1,
    "id":1
   },
   {
-   "picture": "starbucks.png",
+   "picture": "../images/starbucks.png",
    "value": 2,
     "id":2
 
   },
   {
-   "picture": "puma.jpg",
+   "picture": "../images/puma.jpg",
    "value": 3,
     "id":3
 
   },
   {
-   "picture": "mozilla.png",
+   "picture": "../images/mozilla.png",
    "value": 4,
     "id":4
 
   },
   {
-   "picture": "hp.jpg",
+   "picture": "../images/hp.jpg",
    "value": 5,
     "id":5
 
   },
   {
-   "picture": "fanta.jpg",
+   "picture": "../images/fanta.jpg",
    "value": 6,
     "id":6
 
   },
   {
-   "picture": "google.png",
+   "picture": "../images/google.png",
    "value": 1,
     "id":7
 
   },
   {
-   "picture": "starbucks.png",
+   "picture": "../images/starbucks.png",
    "value": 2,
     "id":8
 
   },
   {
-   "picture": "puma.jpg",
+   "picture": "../images/puma.jpg",
    "value": 3,
     "id":9
 
   },
   {
-   "picture": "mozilla.png",
+   "picture": "../images/mozilla.png",
    "value": 4,
     "id":10
 
   },
   {
-   "picture": "hp.jpg",
+   "picture": "../images/hp.jpg",
    "value": 5,
     "id":11
 
   },
   {
-   "picture": "fanta.jpg",
+   "picture": "../images/fanta.jpg",
    "value": 6,
     "id":12
 

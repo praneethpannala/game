@@ -16,3 +16,22 @@
     background-color: #fff;
  	opacity: 0.7;
 }
+
+.carousel-lowerdata{
+ 	width: 90px;
+    height: 90px;
+    border: 1px solid AliceBlue;	
+    padding: 0px
+}
+.carousel-lowerdata-nav{
+	width: 5px!important;
+    height: 90px;
+    
+}
+
+.trending-holidaysearch{
+	width: 302.5px;
+    height: 182px;
+    border: 1px solid black;	
+    padding: 0px
+}

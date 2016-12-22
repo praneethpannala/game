@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app = 'myApp'>
+
+<div ng-controller = "ctrl">
+{{data}}
+<button ng-click = "pressit()">Click</button>
+<div dire>
+{{data2}}
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('ctrl',function($scope){
+		$scope.pressit = function(){
+			$scope.$broadcast('broad',{data : "praneeth"});
+		}
+		$scope.data = "Ragha";
+	});
+
+	app.directive('dire',function(){
+		return{
+			controller: function($scope){
+				$scope.$on('broad',function(ev, ar){
+					$scope.data2 = ar.data;
+				})
+			}
+		}
+	});
+</script>
+</body>
+</html>
