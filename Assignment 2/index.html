@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-2">
+			<img src="logo.png" alt="Mountain View" style="width:117px;height:82px;margin-left: 22px;margin-top: 10px;margin-bottom: 11px">
+		</div>
+
+		<div class="col-md-6 col-md-offset-4" style="margin-top: 30px">
+			<div class="col-md-5">
+			 	<form style="width: 358px;height: 45px">
+				    <div class="input-group">
+				      <input type="text" class="form-control"  placeholder="Search">
+				      <div class="input-group-btn">
+				        <button class="btn btn-default" style="border-left:0" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				      </div>
+				    </div>
+			  	</form>
+		  	</div>
+		  	<div class="col-md-2 col-md-offset-4">
+			  	<div class="user-background "><span class="glyphicon glyphicon-user" style="margin: 30%;font-size: 15px"></span></div>
+
+			  	
+		  	</div>
+	  	</div>
+	</div>  	   
+
+	<div>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">	
+		    	<a class="navbar-brand" href="#">Farmer Dashboard</a>
+		    </div>
+		    <ul class="nav navbar-nav" style="float: right;">
+		      <li><a class="glyphicon glyphicon-map-marker" style="font-size: 20px"></a></li>
+		      <li><a href="#">
+	         		 <span class="glyphicon glyphicon-th-large" style="font-size: 20px"></span>
+	       		 </a>
+	      	  </li>
+		    </ul>
+		  </div>
+		</nav>
+  	</div>
+
+  	<div class="col-md-12" >  
+  		<h4 style="margin-left: 10%">Search Records By</h4>
+  		<div class="col-md-3 col-md-offset-1" >
+		  	 <select class="selectpicker form-control" style="background-color: #F3F3F3;border-radius: 0;height:60px;width: 90%">
+			    <optgroup>
+			      <option>Ranch/Commodity</option>
+			      <option>Mustard</option>
+			      <option>Ketchup</option>
+			      <option>Relish</option>
+			    </optgroup>
+
+			 </select>
+		</div>	
+  		<div class="col-md-3 col-md-offset-0">
+			 <select class="selectpicker form-control" style="background-color:#F3F3F3;border-radius: 0;height:60px; margin-left: -16px">
+			    <optgroup>
+			      <option>All</option>
+			      <option>Mustard</option>
+			      <option>Ketchup</option>
+			      <option>Relish</option>
+			    </optgroup>
+
+			 </select>
+  		</div>	
+  		<div class="col-md-3 col-md-offset-0">
+			 <select class="selectpicker form-control" style="background-color: #F3F3F3;border-radius: 0;height:60px;margin-left: -16px">
+				<optgroup>
+					<option>Record Type</option>
+					<option>Mustard</option>
+					<option>Ketchup</option>
+					<option>Relish</option>
+				</optgroup>
+
+			</select>
+	  	</div>
+
+		
+	</div>	
+
+	<div class="col-md-12">
+		<div class="col-md-6" style="margin-top: 60px;">
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#"><b>Commodities</b></a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+					<div class="btn-group btn-group-lg" role="group"  aria-label="Basic example">
+					  <button type="button " style="background-color: transparent;"  class="btn btn-secondary">Left</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Middle</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>	
+		</div>
+
+		<div class="col-md-6" style="margin-top: 60px">
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Forecast/Actual</a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+			      <div class="btn-group btn-group-lg" role="group"  aria-label="Basic example">
+					  <button type="button" style="background-color: transparent;"  class="btn btn-secondary">Left</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Middle</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>	
+		</div>
+		
+	</div>
+
+	<div class="col-md-12">
+		<div class="col-md-6">	
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Water Records</a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+			      <div class="btn-group btn-group-lg" role="group"  aria-label="Basic example">
+					  <button type="button" style="background-color: transparent;"  class="btn btn-secondary">Left</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Middle</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>
+
+			<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Email</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>John</td>
+			        <td>Doe</td>
+			        <td>john@example.com</td>
+			      </tr>
+			      <tr>
+			        <td>Mary</td>
+			        <td>Moe</td>
+			        <td>mary@example.com</td>
+			      </tr>
+			      <tr>
+			        <td>July</td>
+			        <td>Dooley</td>
+			        <td>july@example.com</td>
+			      </tr>
+			    </tbody>
+			  </table>
+
+	  	</div>
+
+	  	<div class="col-md-6">	
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Forecast/Actual</a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+			      <div class="btn-group btn-group-lg" role="group"  aria-label="Basic example">
+					  <button type="button" style="background-color: transparent;"  class="btn btn-secondary">Left</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Middle</button>
+					  <button type="button" style="background-color: transparent;" class="btn btn-secondary">Right</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>
+
+			<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Email</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>John</td>
+			        <td>Doe</td>
+			        <td>john@example.com</td>
+			      </tr>
+			      <tr>
+			        <td>Mary</td>
+			        <td>Moe</td>
+			        <td>mary@example.com</td>
+			      </tr>
+			      <tr>
+			        <td>July</td>
+			        <td>Dooley</td>
+			        <td>july@example.com</td>
+			      </tr>
+			    </tbody>
+			</table>
+
+	  	</div>
+	</div>
+
+
+
+
+
+</body>
+</html>
