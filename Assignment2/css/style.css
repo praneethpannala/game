@@ -1,0 +1,94 @@
+.stylish-input-group .input-group-addon{background:#fff!important}.stylish-input-group .form-control{border-right:0;box-shadow:0 0 0;border-color:#ccc}.stylish-input-group button{border:0;background:0 0}.user-background{border-radius:100%;width:40px;height:40px;background-color:#DADADA}.searchby-button{border:1px;background-color:#88B55A;height:60px;width:60px;cursor:pointer;margin-left:3%}.water-records-buttons{padding:0;height:51px;font-size:12px;width:63px}
+
+.collapsebutton{
+	border: 1px solid;
+    width: 61px;
+    height: 55px;
+    font-size: 26px;
+    margin: 0px;
+    padding-left: 21px;
+    padding-top: 10px;
+    color: white;
+    background-color: rgb(132,184,74);	
+}
+
+.collapsebutton{
+	border: 1px solid;
+    width: 60px;
+    height: 55px;
+    font-size: 26px;
+    margin: 0px;
+    padding-left: 21px;
+    padding-top: 10px;
+    color: white;
+    background-color: rgb(132,184,74);	
+}
+
+.listFilter{
+	width: 60px;
+    height: 60px;	
+    box-sizing: border-box;
+    padding: 17px;
+    font-size: 18px;
+    background-color: rgb(132,184,74);
+    color: white;
+}
+
+.tableBorders{
+	box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px groove white;
+    margin-top: -23px;
+}
+
+.tableheaderSize{
+    font-size: 11px;
+    padding: 17px;
+    font-weight: 500;
+}
+
+.graphContainer{
+	height: 200px;
+	width: 70%;
+	margin: 15%;
+}
+
+.forecastStrawBerriesList{
+	background-color: #F3F3F3;
+	height: 39px;
+	margin-left: -16px;
+	margin-top: -21px;
+	border: none;
+	width: 85%;
+}
+
+.logoDimensions
+{
+	width:117px;
+	height:82px;
+	margin-left: 22px;
+	margin-top: 10px;
+	margin-bottom: 11px;
+}
+
+.searchInputStyle{
+	width: 302px;
+	height: 45px
+}
+
+.resultSearch{
+	background-color: #F3F3F3;
+	border-radius: 0;
+	height:60px;
+}
+
+.userDimenions{
+	margin: 30%;
+	font-size: 15px
+}
+
+.navbarDimensions{
+	width: 94%;
+	padding: 0
+}

@@ -1,0 +1,52 @@
+{ "Organic 13" : [ 
+  {
+   "ranch": "Field 1",
+   "watersource": "Sprinkler",
+   "location":"Location 123",
+   "sampledate":"12/12/16",
+   "result":"./images/Tick logo.png"
+
+  },
+  {
+   "ranch": "Field 2",
+   "watersource": "Well",
+   "location":"Location 1",
+   "sampledate":"12/12/16",
+   "result":"./images/X logo.png"
+
+  },
+ {
+   "ranch": "Field 3",
+   "watersource": "Well",
+   "location":"Location 2",
+   "sampledate":"12/12/16",
+   "result":"./images/X logo.png"
+
+  }],
+  "Organic 14": [
+ {
+   "ranch": "Field 1",
+   "watersource": "Sprinkler",
+   "location":"Location 123",
+   "sampledate":"12/12/16",
+   "result":"./images/Tick logo.png"
+
+  },
+  {
+   "ranch": "Field 2",
+   "watersource": "Well",
+   "location":"Location 1",
+   "sampledate":"12/12/16",
+   "result":"./images/X logo.png"
+
+  },
+ {
+   "ranch": "Field 3",
+   "watersource": "Well",
+   "location":"Location 2",
+   "sampledate":"12/12/16",
+   "result":"./images/X logo.png"
+
+  }] }
+
+

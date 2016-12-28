@@ -1,0 +1,125 @@
+{ "Organic 13" : [ 
+  {
+   "ranch": "Field 1",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1400",
+   "actual":"1400",
+   "result":"./images/Tick logo.png"
+
+  },
+  {
+   "ranch": "Field 2",
+   "commodity": "Blueberries",
+   "harvest": "12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  },
+  {
+   "ranch": "Field 3",
+   "commodity": "Strawberries",
+   "harvest":"11/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  },
+ {
+   "ranch": "Field 4",
+   "commodity": "Well",
+   "harvest":"12/12/16",
+   "target":"1350",
+   "actual":"1350",
+   "result":"./images/Tick logo.png"
+
+
+  }],
+  "Organic 15": [
+ {
+   "ranch": "Field 1",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  },
+  {
+   "ranch": "Field 2",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  }],
+  "Organic 16" : [ 
+  {
+   "ranch": "Field 1",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1400",
+   "actual":"1400",
+   "result":"./images/Tick logo.png"
+
+
+  },
+  {
+   "ranch": "Field 2",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  }],
+  "Organic 17" : [ 
+  {
+   "ranch": "Field 1",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1400",
+   "actual":"1400",
+   "result":"./images/Tick logo.png"
+
+
+  },
+  {
+   "ranch": "Field 2",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  },
+ {
+   "ranch": "Field 3",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+    "result":"./images/Tick logo.png"
+
+
+  },
+  {
+   "ranch": "Field 4",
+   "commodity": "Blueberries",
+   "harvest":"12/12/16",
+   "target":"1250",
+   "actual":"1250",
+   "result":"./images/Tick logo.png"
+
+
+  }] }
+
+

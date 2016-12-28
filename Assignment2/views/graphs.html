@@ -1,0 +1,63 @@
+		<!-- graphs -->
+	<div class="col-md-12" ng-controller="graphController">
+		<!-- forecast graph -->
+		<div class="col-md-6" style="margin-top: 60px;">
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			  	<!-- heading of the graph -->
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#" style="font-weight: bold;">Commodities</a>
+			    </div>
+
+			    <!-- group buttons -->
+			   <ul class="nav navbar-nav" style="float: right;">
+				    <div class = "btn-group ">
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm borderColor">1 month</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 months</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">1 year</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 years</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>	
+			<!-- container where graph is displayed-->
+			<div id="commoditiesContainer" class="graphContainer">
+  			</div>
+		</div>
+		<!-- commodity graph-->
+		<div class="col-md-6" style="margin-top: 60px">
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			  	<!-- header for the nav -->
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#" style="font-weight: bold;">Forecast/Actual</a>
+			    </div>
+			    <!-- group buttons-->
+			    <ul class="nav navbar-nav" style="float: right;">
+				    <div class = "btn-group ">	   
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 months</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">1 year</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 years</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>
+			<div class="col-md-6">
+				 <select class="selectpicker form-control forecastStrawBerriesList">
+				    <optgroup>
+				      <option>Strawberries</option>
+				      <option>Mustard</option>
+				      <option>Ketchup</option>
+				      <option>Relish</option>
+				    </optgroup>
+
+				 </select>	
+			 </div>
+			<!-- container where data will be shown -->
+			<div id="forecastContainer" class="graphContainer">
+  			</div>
+
+		</div>
+		
+	</div>
+	

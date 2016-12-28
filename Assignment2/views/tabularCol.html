@@ -1,0 +1,91 @@
+	<!-- tabular data -->
+	<div class="col-md-12" ng-controller="tableController">
+		<!-- container for water records -->
+		<div class="col-md-6">	
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#" style="font-weight: bold;">Water Records</a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+				    <div class = "btn-group ">
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm borderColor">1 month</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 months</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">1 year</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 years</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>
+			<!-- data which is displayed-->
+			<table class="table tableBorders">
+			    <thead>
+			      <tr>
+			        <th class="tableheaderSize" >Ranch</th>
+			        <th class="tableheaderSize">Water Source</th>
+			        <th class="tableheaderSize">Location</th>
+			        <th class="tableheaderSize">Sample Date</th>
+			        <th class="tableheaderSize">Result</th>
+
+			      </tr>
+			    </thead>
+			    <tbody ng-repeat="(key, dataSet) in data">
+			    		<td colspan="6" style="font-weight: 700;">{{key}}</td>
+
+					   <tr ng-repeat="value in dataSet"> 
+					       	<td style="color: LightSkyBlue ">{{value.ranch}}</td>
+					       	<td>{{value.watersource}}</td>
+					       	<td>{{value.location}}</td>
+					       	<td>{{value.sampledate}}</td>
+					       	<td><img ng-src="{{value.result}}"></td>
+					   </tr>
+			  
+			    </tbody>
+			  </table>
+
+	  	</div>
+	  	<!-- container for forecast tabular data -->
+	  	<div class="col-md-6">	
+			<nav class="navbar navbar-default" style="background-color:white">
+			  <div>
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#" style="font-weight: bold;">Forecast/Actual</a>
+			    </div>
+			    <ul class="nav navbar-nav" style="float: right;">
+				    <div class = "btn-group ">
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm borderColor">1 month</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 months</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">1 year</button>
+					   <button type = "button" class = "btn btn-default water-records-buttons btn-group-sm">3 years</button>
+					</div>
+			    </ul>
+			  </div>
+			</nav>
+			<!-- data table-->
+			<table class="table tableBorders">
+			    <thead>
+			      <tr>
+			        <th class="tableheaderSize">Ranch</th>
+			        <th class="tableheaderSize">Commodity</th>
+			        <th class="tableheaderSize">Harvest Date</th>
+			        <th class="tableheaderSize">Target Yield</th>
+			        <th class="tableheaderSize">Actual Yield</th>
+
+			      </tr>
+			    </thead>
+			    <tbody ng-repeat="(key, dataSet) in forecastRecord">
+			    		<td colspan="6" style="font-weight: 700;">{{key}}</td>
+					   <tr ng-repeat="value in dataSet"> 
+					       	<td style="color: LightSkyBlue">{{value.ranch}}</td>
+					       	<td>{{value.commodity}}</td>
+					       	<td>{{value.harvest}}</td>
+					       	<td>{{value.target}}</td>
+					       	<td>{{value.actual}}</td>
+					       	<td><img ng-src="{{value.result}}"></td>
+					   </tr>
+			  
+			    </tbody>
+			  </table>
+	  	</div>
+
+	</div>
