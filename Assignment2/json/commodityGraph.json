@@ -1,6 +1,7 @@
 [{
             "name": "Harvest1",
              "interval": 1,
+             "color": "#225D6D",
             "dataPoints": [{
                 "label": "Strawberries",
                 "y": 60
@@ -21,7 +22,8 @@
 
         {
             "name": "Harvest2",
-             "interval": 1,
+            "interval": 1,
+            "color": "#E9A94B",
             "dataPoints": [{
                 "label": "Strawberries",
                 "y": 0
@@ -41,7 +43,8 @@
         },
         {
             "name": "Harvest3",
-             "interval":1,
+            "interval":1,
+            "color": "#90AE64",
             "dataPoints": [{
                 "label": "Strawberries",
                 "y": 0

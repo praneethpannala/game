@@ -3,6 +3,8 @@
     {
             "name": "Forecast",
             "interval": 1,
+            "color":"#90AE64",
+            "height":"20",
             "dataPoints": [{
                 "label": "Field 1",
                 "y": 1700
@@ -33,6 +35,7 @@
         {
             "name": "Actual",
             "interval": 1,
+            "color": "#E9A94B",
             "dataPoints": [{
                 "label": "Field 1",
                 "y": 2000

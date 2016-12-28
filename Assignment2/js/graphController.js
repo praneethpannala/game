@@ -71,8 +71,7 @@
 	            for (var i = 0; i < $scope.forecastData.length; i++) {
 	                $scope.forecastData[i].type = "column";
 	                $scope.forecastData[i].showInLegend = true;
-
-
+	                $scope.forecastData[i].height="500";
 	            };
 	            console.log("Forecast service" + $scope.forecastData);
 	            forecastFunction($scope.forecastData);
