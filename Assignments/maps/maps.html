@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		    <!-- links map min file -->
+		    <script src="ng-map.min.js"></script>
+		    <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+		  	<script src="mapsModule.js"></script>
+			<script src="mapsController.js"></script>
+	  
+	</head>
+
+	<body ng-app="mapping" ng-controller="mapCtrl">
+			 <ng-map zoom="2" map-type-id="TERRAIN"  center="[17.3850, 78.4867]">
+		 		<shape name="circle" ng-repeat="city in circle" 
+			      stroke-color="#FF0000"
+			      stroke-opacity="0.8"
+			      stroke-weight="2"
+			      fill-color="#FF0000"
+			      fill-opacity="0.35"
+			      center="{{city.position}}"
+			      radius="{{getRadius(city.population)}}">
+			    </shape>
+
+			    <directions
+		          draggable="true"
+		          travel-mode="DRIVING"
+		          origin="New York"
+		          destination="Ohio">
+		        </directions>
+			  
+			 </ng-map>
+		
+	</body>
+
+</html>
