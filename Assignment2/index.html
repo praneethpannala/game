@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 
-	<script type="text/javascript" src="./js/canvasjs.min.js"></script>
+	<script type="text/javascript" src="./js/lib/canvasjs.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="./js/bootstrap.js"></script>
-	<script src="./js/angular.min.js"></script>
-	<script src="./js/module.js"></script>
-	<script src="./js/myGraphDirective.js"></script>
-	<script src="./js/graphController.js"></script>
-	<script src="./js/tableController.js"></script>
-	<script src="./js/graphService.js"></script> 
+	<script src="js/lib/bootstrap.js"></script>
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/module/module.js"></script>
+	<script src="js/directives/graphDirective.js"></script>
+	<script src="js/directives/navBarDirective.js"></script>
+	<script src="js/directives/tabularDirective.js"></script>
+	<script src="js/controller/graphController.js"></script>
+	<script src="js/controller/tableController.js"></script>
+	<script src="js/services/graphService.js"></script> 
+	<script src="js/controller/navBarCtrl.js"></script>		
 
 </head>
-<body ng-app="app">
+<body ng-app="app" class="container-fluid">
 
 	<div navbar></div>	
 	<div graphs></div>
-	<div tabularcol></div>		
+	<div tabularcol></div>
+
+	
 	
 </body>
 </html>

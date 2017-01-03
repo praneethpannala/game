@@ -2,26 +2,14 @@
 
 .collapsebutton{
 	border: 1px solid;
-    width: 61px;
-    height: 55px;
-    font-size: 26px;
-    margin: 0px;
-    padding-left: 21px;
-    padding-top: 10px;
-    color: white;
-    background-color: rgb(132,184,74);	
-}
-
-.collapsebutton{
-	border: 1px solid;
     width: 60px;
-    height: 55px;
-    font-size: 26px;
+    height: 52px;
+    font-size: 29px;
     margin: 0px;
-    padding-left: 21px;
-    padding-top: 10px;
+    padding-left: 16px;
+    padding-top: 3px;
     color: white;
-    background-color: rgb(132,184,74);	
+    background-color: rgb(132,184,74);
 }
 
 .listFilter{
@@ -134,3 +122,30 @@
 .table > tbody > tr > td {
 	border-top: none;
 }
+
+.navbar-fixed-left {
+  width: 140px;
+  position: absolute;
+  border-radius: 0;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 200px;
+}
+
+.navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-nav > li > ul > dd{
+    font-size: 11px;
+    padding: 5px
+
+}
+
+.glyphicon-menu-right{
+    font-size: 10px
+}
+

@@ -1,0 +1,10 @@
+.boxsize{
+	width:200px;
+	height: 200px;
+	border: 1px solid black;
+}
+
+.imageDimensions{
+	width:100px;
+	height:100px;
+}

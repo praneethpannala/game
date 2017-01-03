@@ -24,23 +24,46 @@
 	  	</div>
 </div>  	   
 	<!-- nav bar -->
-	<div class="row">
-		<div class="col-md-1 collapsebutton"><span class="glyphicon glyphicon-align-justify"></span></div>	
+	<div class="row" ng-controller="navBarCtrl">
+		<button class="col-md-1 collapsebutton glyphicon glyphicon-align-justify" ng-click="hey()"></button>	
 		<div class="col-md-11 navbarDimensions">	
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default" style="    border-radius: 0;">
 			  <div>  	
 			    	<a class="navbar-brand">Farmer Dashboard</a>
 			    	
-			    <ul class="nav navbar-nav" style="float: right;">
-			      <li><a class="glyphicon glyphicon-map-marker" style="font-size: 20px"></a></li>
-			      <li><a href="#">
-		         		 <span class="glyphicon glyphicon-th-large" style="font-size: 20px"></span>
-		       		 </a>
-		      	  </li>
-			    </ul>
+				    <ul class="nav navbar-nav" style="float: right;">
+				      <li><a class="glyphicon glyphicon-map-marker" style="font-size: 20px"></a></li>
+				      <li><a class="glyphicon glyphicon-th-large" style="font-size: 20px" href="#"></a></li>
+				    </ul>
 			  </div>
 			</nav>
 		</div>
+
+		<div ng-show="data" id="side-menu" style="width:100%;position:absolute;background-color: rgba(74,74,74,0.5);z-index: 1;">
+			<div style="background-color:rgb(132,184,74); width: 220px;"  class="navbar navbar-fixed-left" >
+				<a class="navbar-brand" style="color: white;font-size: 20px">Farmer</a>
+				<button type="button" style="color: white;background: transparent;border:none;float: right;font-size: 25px;" class="btn btn-default glyphicon glyphicon-align-justify" ng-click="close()"></button><br>
+
+				<hr style="width:100%;height:1px;">
+				<ul class="nav navbar-nav collapseListColor">
+					<li><a><span class="glyphicon glyphicon-menu-right"></span> Farmer Dashboard</a></li>
+					<li><a data-toggle="collapse" href="#collapseOne"><span class="glyphicon glyphicon-menu-right"></span> Production</a>
+						<ul id="collapseOne" class="collapse out">
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> Crop and Yield Forecast</dd>
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> Weather Forecast</dd>
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> Irrigation Management</dd>
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> Fertiliser Management</dd>
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> PreHarvest Disease and Vector Management</dd>
+					      <dd><span class="glyphicon glyphicon-menu-right"></span> ROI</dd>
+					    </ul>
+					</li>    
+					<li><a><span class="glyphicon glyphicon-menu-right"></span> Food Safety</a></li>
+					<li><a><span class="glyphicon glyphicon-menu-right"></span> Traceability</a></li>
+					<li><a><span class="glyphicon glyphicon-menu-right"></span> Recall/Incident Tracking</a></li>
+				</ul>
+			</div>
+		</div>
+		
   	</div>
 
   	<!-- container for searching the records -->
