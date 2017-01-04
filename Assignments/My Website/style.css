@@ -1,0 +1,79 @@
+.navBarGlyphicon{
+	font-size: 16px
+}
+.nav>li>a {
+	font-size: 18px
+}
+
+.homebackground {
+    background-image: url("mylogo.jpg");
+    height: 637px;
+    opacity: 0.9;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+.siteNamePosition{
+	width: 402px;
+    height: 57px;
+    border: 1px solid;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 28%;
+    top: 42%;
+    opacity: 0.8;
+    padding-left: 39px;
+    padding-top: 13px;
+}
+
+.siteName{
+	font-size: 19px;
+    opacity: 0.9;
+}
+
+.statistics{
+	width: 105%;
+    height: 100px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border:none;
+    color: #fff!important;
+    background-color: #616161!important;
+}
+
+.statistics > div {
+	margin-top: 16px!important;
+    margin-bottom: 16px!important;
+    font-size: 19px;
+    text-align: center;
+}
+
+.portfolioNamePosition{
+	letter-spacing: 10px;
+    font-size: 34px;
+    margin-left: 34%;
+    padding-top: 19%;
+}
+
+.portfolioImages{
+	height: 150px;
+	width: 200px;
+	margin:9px
+}
+
+.protfolioImagesLoadButton{
+	background-color: #f1f1f1!important;
+    font-size: 18px;
+    margin-left: 45%;
+    border-radius: 0;
+    margin-top: 6%;
+}
+
+.navbar-fixed-top.scrolled {
+ 
+ background-color: red;		
+  transition: background-color 200ms linear;
+
+}

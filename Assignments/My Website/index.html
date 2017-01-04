@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="ng-map.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+	<script>
+		angular.module("myApp",["ngMap"])
+	</script> 
+	<script>
+		$(function () {
+		  	$(document).scroll(function () {
+
+		  	 	$('body').scrollspy({target: ".navbar", offset: 10});   
+			  	var $nav = $(".navbar-fixed-top");
+    			$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+
+			});
+		});
+
+	</script>
+
+</head>
+
+<body ng-app="myApp" data-spy="scroll" data-target=".navbar" data-offset="50" style="opacity: 0.8">
+	<div class="homebackground">
+		<nav class="navbar navbar-default navbar-fixed-top" style="background:transparent;border:none">
+		  <div>
+		    <ul class="nav navbar-nav ">
+		      <li><a href="#">Home</a></li>
+		      <li><a href="#About"> <span class="glyphicon glyphicon-user navBarGlyphicon"></span> About</a></li>
+		      <li><a href="#Portfolio"><span class="glyphicon glyphicon-th navBarGlyphicon"></span> Portfolio</a></li>
+		      <li><a href="#Contact"><span class="glyphicon glyphicon-envelope navBarGlyphicon"></span> Contact</a></li>
+		      <li><a class="glyphicon glyphicon-search navBarGlyphicon"></a></li>
+		    </ul>
+
+		    
+		  </div>
+		</nav>
+
+		<div class="siteNamePosition"><span class="siteName" style="letter-spacing: 10px">MY WEBSITE LOGO</span></div>
+	</div>
+
+	<div class="container" id="About">
+		<div style="text-align: center;">
+			<h3>About Me</h3>
+			<p style="font-style: italic;">I love photography</p>		
+		</div>
+		<p style="margin-left: 35px;
+    margin-right: 35px;line-height: 27px;margin-top: 3%">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    	<div class="col-md-12" style="margin-top: 3%;opacity: 0.8">
+    		<div class="col-md-6">
+	    		<h5 style="margin-left: 45%;
+    opacity: 0.8;"> <span class="glyphicon glyphicon-user "></span> My Name</h5>
+				<img src="photo.jpeg"  style="width: 400px;height: 283px;margin-top: 8%;margin-left: 8%;">
+    		</div>
+    		<div class="col-md-6" style="line-height: 27px;">
+    			Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    		</div>
+    	</div>
+	</div>
+
+	<div class="container" style="margin-top: 3%;">
+		<h4 style="text-align: center;">Im really good at:</h4>
+
+
+		<div class="container">
+		  <h4 style="letter-spacing: 10px;opacity: 0.8"><span class="glyphicon glyphicon-camera"></span>Photography </h4>
+		  <div class="progress">
+		    <div class="progress-bar" role="progressbar" style="width:90%;background-color:#757575;">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container">
+		  <h4 style="letter-spacing: 10px;opacity: 0.8"><span class="glyphicon glyphicon-object-align-vertical"></span>Web Design</h4>
+		  <div class="progress">
+		    <div class="progress-bar" role="progressbar" style="width:80%;background-color:#757575;">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container">
+		  <h4 style="letter-spacing: 10px;opacity: 0.8"><span class="glyphicon glyphicon-picture"></span>Photoshop</h4>
+		  <div class="progress">
+		    <div class="progress-bar" role="progressbar" style="width:70%;background-color:#757575;">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="statistics row">
+
+			<div class="col-md-2 col-md-offset-1">14+ <br> Partners</div>
+			<div class="col-md-2 col-md-offset-1">55+ <br> Projects Done</div>
+			<div class="col-md-2 col-md-offset-1">89+ <br> Happy Clients</div>
+			<div class="col-md-2 col-md-offset-1">150+ <br> Meetings</div>
+
+		</div>
+	</div>
+
+	<div class="container" id="Portfolio">
+		<div style="background-image: url(portfolio.jpg);width: 100%;height: 350px;opacity: 0.7">
+			 <h4 class="portfolioNamePosition">PORTFOLIO</h4>
+		</div>
+
+		<div style="margin-top: 9%">
+			<div style="text-align: center;">
+				<h3>MY WORK</h3>
+				<p style="font-style: italic;">Here are some of my latest lorem work ipsum tipsum.</p>	
+				<p style="font-style: italic;">Click on the images to make them bigger</p>	
+			</div>
+
+			<div class="row" style="margin-left: 4%;">
+				<img class=" portfolioImages" src="baby.jpg">
+				<img class=" portfolioImages" src="cricket.jpg">
+				<img class=" portfolioImages" src="mobile.jpg">
+				<img class=" portfolioImages" src="modi.jpg">
+				<img class=" portfolioImages" src="tennis.jpg">
+				<img class=" portfolioImages" src="dog.jpg">
+				<img class=" portfolioImages" src="duck.jpg">
+				<img class=" portfolioImages" src="horse.jpg">
+			</div>	
+			<button type="button" class="btn btn-default btn-lg protfolioImagesLoadButton">Load More</button>
+
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 6%" id="Contact">
+		<div style="background-image: url(contact.jpg);width: 100%;height: 430px;opacity: 0.7">
+			 <h4 class="portfolioNamePosition" style="color: white">CONTACT</h4>
+		</div>
+
+		<div style="margin-top: 9%">
+			<div style="text-align: center;">
+				<h3>WHERE I WORK</h3>
+				<p style="font-style: italic;">I'd love your feedback!</p>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div style="width: 315px;height: 15%" class="col-md-3">
+				<ng-map scrollwheel:false zoom="15" center="17.3850, 78.4867"></ng-map>
+			</div>
+
+			<div class="col-md-8" style="font-size: 17px;margin-top: 17px;">
+				<p><span class="glyphicon glyphicon-map-marker"></span> Chicago,US</p>
+				<p><span class="glyphicon glyphicon-earphone"></span> Phone: +00 151515</p>
+				<p><span class="glyphicon glyphicon-envelope"></span> Email: mail@mail.com</p>
+				<p>Swing by for a cup of Coffee, or leave me a note:</p>
+				<form class="form-inline">
+				    <div class="form-group">
+				      <input type="email"  style="border-radius: 0;height: 50px;" class="form-control" id="email" placeholder="Enter email">
+				    </div>
+				    <div class="form-group">
+				      <input type="password"  style="border-radius: 0;height: 50px;" class="form-control" id="pwd" placeholder="Enter password">
+				    </div><br>
+				    <div class="form-group" style="margin-top:8px">
+				      <input type="text"  style="border-radius: 0;height: 50px;width: 396px;" class="form-control" id="pwd" placeholder="Enter Message">
+				    </div>
+			  	</form>
+
+			   	<button type="button" class="btn btn-default btn-lg" style="background-color: black;color: white;border-radius: 0;margin-top: 10px;margin-left: 36%;"><span class="glyphicon glyphicon-send" ></span> Send Message</button>
+
+
+
+				
+			</div>
+			
+		</div>
+
+	</div>
+
+
+	
+</body>
+
+</html>
