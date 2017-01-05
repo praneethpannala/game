@@ -1,0 +1,30 @@
+When frequency is other 
+
+Dont display Payment due on, payment due date
+______
+
+When frequency is Annually, Quarterly, Semi-Annually
+and Payment due on is specific day of period 
+
+Show payment due day
+
+______
+When frequency is monthly 
+dont show payment due on
+Show Payment due day
+
+______
+When frequency is other show only. Amount per Basis in second screen
+
+______
+When Growth type is fixed show fixed growth
+When Growth type is percent show percent growth
+
+
+
+****************
+
+Font-awesome icons in the footer section:
+- fa-info-circle
+- fa-calendar-o
+

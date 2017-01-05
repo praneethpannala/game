@@ -1,21 +1,24 @@
 .navBarGlyphicon{
-	font-size: 16px
+	font-size: 15px
 }
 .nav>li>a {
-	font-size: 18px
+	font-size: 15px
 }
 
 .homebackground {
     background-image: url("mylogo.jpg");
-    height: 637px;
-    opacity: 0.9;
-    background-attachment: scroll;
+    height: 638px;
+    opacity: 0.9!important;
     background-repeat: no-repeat;
+    background-size: cover;
+        background-attachment: scroll;
+
+
 }
 
 .siteNamePosition{
-	width: 402px;
-    height: 57px;
+	width: 417px;
+    height: 65px;
     border: 1px solid;
     box-sizing: border-box;
     background-color: black;

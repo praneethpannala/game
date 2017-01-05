@@ -1,0 +1,96 @@
+<div ng-controller="modalCtrl">
+ <div style="width: 70%;margin-left: 10%;margin-top: 10%">
+    <table class = "table">
+      <thead style="background-color: #EAEAEA;">
+        <tr>
+          <th></th>
+          <th>Frequency<br>Type</th>
+          <th>Start<br>Date</th>
+          <th>End Date</th>
+          <th>Total Cash<br>With Tax</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+               <td>Design</td>
+        </tr>
+            <tr style="border-top: none;">
+                <td colspan="6" class="hiddenRow">
+                    <div id="demo1" class="accordian-body collapse">
+                        <table class="table">
+                      
+                          <tbody>
+                            <tr>
+                              <td>Site-1</td>
+                              <td>123</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>OK</td>
+                            </tr>
+                            <tr>
+                              <td>Site-2</td>
+                              <td>321</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>OK</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+
+        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+               <td>Credit Account</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="hiddenRow"><div id="demo2" class="accordian-body collapse">Demo2</div></td>
+            </tr>
+
+        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+               <td>Credit Account</td>
+            </tr>
+            <tr>
+                <td class="hiddenRow">
+                  <div id="demo3" class="accordian-body collapse">Demo3</div>
+                </td>
+                
+              <td class="hiddenRow">
+                  <div id="demo3" class="accordian-body collapse">Demo1</div>
+              </td>
+              <td class="hiddenRow">
+                  <div class="accordian-body collapse" id="demo3">Demo1</div>
+              </td>
+                <td class="hiddenRow">
+                    <div class="accordian-body collapse" id="demo3">Demo1</div>
+                </td>
+                <td class="hiddenRow">
+                    <div class="accordian-body collapse" id="demo3">Demo1</div>
+                </td>     
+            </tr>
+      </tbody>
+      
+    </table>
+    
+    
+  <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal" >ADD</button>
+
+   
+  </div>
+
+  <payment-information></payment-information>
+
+  <div payment-params></div>
+
+
+
+
+
+
+</div>  
+  <!-- <div payment-Information></div> -->

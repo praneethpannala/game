@@ -1,0 +1,120 @@
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="width: 670px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payment Information</h4>
+        </div>
+        <div class="modal-body" style="margin: 0px 0px 20px 20px;height: 468px;overflow: auto">
+         	
+          <div>
+            <form class="form-inline">
+              
+                <div class="form-group">
+                  <h5>Payment Type<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                   <select class="form-control" style="width:290px;height:35px" ng-model="selectedPaymentType" ng-options="item.id as item.path.split('\\')[2] for item in paymentType">
+                 </select>
+                 <p style="color: red" ng-show="paymentAlert">Please fill out this field</p>
+                </div>
+                
+                <div class="form-group">
+                  <h5>Accounting Type<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                   <select class="form-control" style="width:290px;height:35px" ng-model="selectedAccountType" ng-options="item.value for item in AccountingType">
+                  
+                 </select>
+                 <p style="color: red" ng-show="accountingAlert">Please fill out this field</p>
+                </div>
+                
+            </form>
+          </div>
+
+          <div>
+            <form class="form-inline">
+            
+              <div class="form-group">
+                <h5>Frequency<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                 <select class="form-control" style="width:188px;height:35px" ng-model="selectedFrequencyType" ng-options="item.id as item.path.split('\\')[2] for item in frequecyType">
+                  
+               </select>
+                 <p style="color: red" ng-show="FrequencyAlert">Please fill out this field</p>
+              </div>
+              
+              <div class="form-group">
+                <h5>Period Start Date<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                 <div class="input-group date" data-provide="datepicker" style="width: 188px;height: 35px">
+                    <input type="text" class="form-control" placeholder="mm/dd/yyyy" >
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                 <p style="color: red" ng-show="PeriodStartAlert">Please fill out this field</p>
+              </div>
+
+              <div class="form-group">
+                <h5>Payment Timing<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                 <select class="form-control " ng-model="selected" ng-options="item.id as item.value for item in PaymentTiming">
+                    </select>
+                 <p style="color: red" ng-show="PaymentTimingAlert">Please fill out this field</p>
+              </div>
+              
+            </form>
+          </div>
+
+
+          <div>
+            <form class="form-inline">
+            
+              <div class="form-group">
+                <h5>Payment Due On<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                 <select class="form-control" style="width:188px;height:35px" ng-model="selected" ng-options="item.id as item.value for item in PaymentDueDay">
+                 </select>
+                 <p style="color: red" ng-show="PaymentDueOnAlert">Please fill out this field</p>
+              </div>
+              
+              <div class="form-group">
+                <h5>Payment Due Day<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                 <select class="form-control" style="width:188px;height:35px" ng-model="selected" ng-options="item.id as item.value for item in PaymentDueOn">
+                  </select>
+                 <p style="color: red" ng-show="PaymentDueDayAlert">Please fill out this field</p>
+              </div>
+
+              <div class="form-group">
+                <h5>Accounting Cost Center</h5>
+                <input type="text" class="form-control" placeholder="0" style="width: 188px;height: 35px">
+                 <p style="color: red" ng-show="AccountingCostCenterAlert">Please fill out this field</p>
+              </div>
+              
+            </form>
+          </div><br><br>
+
+          <div>
+            <input type="checkbox">Option Term Payment 
+            
+          </div><br>
+          <div>
+              <h5>Description</h5>
+
+              <textarea rows="4" cols="50" style="width:600px;height: 55px">
+
+              </textarea>
+            
+          </div>
+
+      </div>
+
+        <div class="modal-footer">
+          <div class="row">
+            <p style="float: left;text-align: center;font-size: 11px;" class="col-md-2" ><i class="fa fa-info-circle" style="font-size: 20px;color:blue"></i><br>Information</p>
+            <p class="col-md-2" style="float: left;text-align: center;font-size: 11px;opacity: 0.5"><i class="fa fa-calendar-o fa-1x" style="font-size: 20px;"></i><br>Parameters</p>
+            <button type="button" style="margin-right: 25px" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#paymentParams"
+            ng-click="movetoPaymentParams()">></button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>

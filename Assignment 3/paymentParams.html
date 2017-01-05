@@ -1,0 +1,95 @@
+  <!-- Modal -->
+   <!-- Modal -->
+  <div class="modal fade" id="paymentParams" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="width: 670px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payment Parameters</h4>
+        </div>
+        <div class="modal-body" style="margin:0px 0px 20px 20px;height: 468px;overflow: auto">
+          
+          <div>
+            <form class="form-inline">
+              
+                <div class="form-group">
+                  <h5>Growth Type</h5>
+                   <select class="form-control " style="height: 35px;width: 286px;" ng-model="selected" ng-options="item.id as item.value for item in GrowthType">
+                    </select>
+
+                 </select>
+                
+                </div>
+                
+                <div class="form-group" style="margin-left: 14px;">
+                  <h5>Fixed Growth</h5>
+                   <input type="text" class="form-control" style="height: 35px;width: 286px;" placeholder="0">
+                </div>
+                
+            </form>
+          </div><br>
+
+          <div>
+            <form class="form-inline">
+            
+              <div class="form-group">
+                <h5>Number of Schedules</h5>
+                   <input type="text" class="form-control" style="height: 35px;width: 290px" placeholder="0">
+              </div>
+              
+              <div class="form-group" style="margin-left: 14px;">
+                <h5>Adjust Every(x) Months</h5>
+                <input type="text" class="form-control" style="height: 35px;width: 290px;" placeholder="0">
+
+              </div>
+              
+            </form>
+          </div><br>
+
+
+          <div>
+             <form class="form-inline">
+            
+                <div class="form-group">
+                  <h5>Charge Amount Basis<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
+                  <select class="form-control" style="width: 200px;height: 35px" ng-model="selected" ng-options="item.id as item.value for item in ChargeAmountBasis">
+                    </select>
+                   
+
+                 </select>
+                
+                </div>
+              
+              <div class="form-group" style="margin-left: 14px;">
+                <h5>Contract Rentable</h5>
+                <input type="text" class="form-control" style="height: 35px;width: 100px;" placeholder="0"><span> square-feet</span>
+              </div>
+              
+              <div class="form-group" style="margin-left: 14px;">
+                <h5>Amount Per Basis</h5>
+                <input type="text" class="form-control" style="height: 35px;width: 183px;" placeholder="0">
+              </div>
+
+            </form>
+          </div><br><br>
+
+         
+  
+
+      </div>
+
+        <div class="modal-footer">
+          <div class="row">
+            <p style="float: left;text-align: center;font-size: 11px;" class="col-md-2" ><i class="fa fa-info-circle" style="font-size: 20px;opacity: 0.5"></i><br>Information</p>
+            <p class="col-md-2" style="float: left;text-align: center;font-size: 11px;"><i class="fa fa-calendar-o fa-1x" style="font-size: 20px;color:blue"></i><br>Parameters</p>
+            <button type="button" style="margin-right: 25px" class="btn btn-default"  data-toggle="modal" data-target="#myModal" data-dismiss="modal"><</button>
+            <button type="button" style="margin-right: 25px" class="btn btn-default" >Save</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
