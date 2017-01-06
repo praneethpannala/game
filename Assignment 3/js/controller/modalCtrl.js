@@ -112,21 +112,32 @@
 			// 	if ($scope.selectedPaymentType== ) {}
 			// }
 
-			$scope.totalDetails[$scope.selectedPaymentType]=[];
+			if ($scope.selectedPaymentType in $scope.totalDetails) 
+			{
+				var details={};
+				details.selectedFrequencyType= $scope.selectedFrequencyType;
+				details.selectedPeriodStarts= $scope.selectedPeriodStarts;
+				details.selectedAccountingCost= $scope.selectedAccountingCost;
 
-			var details={};
-			details.selectedFrequencyType= $scope.selectedFrequencyType;
-			details.selectedPeriodStarts= $scope.selectedPeriodStarts;
-			details.selectedAccountingCost= $scope.selectedAccountingCost;
+				$scope.totalDetails[$scope.selectedPaymentType].push(details);
+			} 
+			else 
+			{	
+				$scope.totalDetails[$scope.selectedPaymentType]=[];
 
-			$scope.totalDetails[$scope.selectedPaymentType].push(details);
+				var details={};
+				details.selectedFrequencyType= $scope.selectedFrequencyType;
+				details.selectedPeriodStarts= $scope.selectedPeriodStarts;
+				details.selectedAccountingCost= $scope.selectedAccountingCost;
+
+				$scope.totalDetails[$scope.selectedPaymentType].push(details);
+
+			}
 
 			console.log($scope.totalDetails);
 			var data= Object.keys($scope.totalDetails);
 			console.log(data);
 			
-
-
 			$scope.selectedPaymentType="";$scope.selectedAccountType,$scope.selectedFrequencyType,
 			$scope.selectedPeriodStarts,$scope.selectedPaymentTiming,$scope.selectedPaymentDueOn,
 				$scope.selectedPaymentDueDay,$scope.selectedAccountingCost,$scope.selectedGrowth,

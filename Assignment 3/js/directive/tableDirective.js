@@ -4,7 +4,7 @@
 	angular.module("myApp").directive("tableDirective",function(){
 		return {
 			restrict: 'EA',
-			templateUrl: 'tableDirective.html'
+			templateUrl: 'views/tableDirective.html'
 		}
 	});
 

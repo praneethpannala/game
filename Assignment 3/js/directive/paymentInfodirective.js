@@ -4,21 +4,21 @@
 	angular.module("myApp").directive("paymentInformation",function(){
 		return {
 			restrict: 'EA',
-			templateUrl: 'paymentInformation.html'
+			templateUrl: 'views/paymentInformation.html'
 		}
 	});
 
 	angular.module("myApp").directive("paymentParams",function(){
 		return {
 			restrict: 'EA',
-			templateUrl: 'paymentParams.html'
+			templateUrl: 'views/paymentParams.html'
 		}
 	});
 
 	angular.module("myApp").directive("deleteModal",function(){
 		return {
 			restrict: 'EA',
-			templateUrl: 'delete.html'
+			templateUrl: 'views/delete.html'
 		}
 	});
 
