@@ -15,4 +15,11 @@
 		}
 	});
 
+	angular.module("myApp").directive("deleteModal",function(){
+		return {
+			restrict: 'EA',
+			templateUrl: 'delete.html'
+		}
+	});
+
 })();

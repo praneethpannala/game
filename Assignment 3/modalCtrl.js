@@ -3,61 +3,175 @@
 
 	angular.module("myApp").controller("modalCtrl",function($scope,dataService,$q)
 	{	
-		$scope.paymentType="";
-		$scope.frequecyType="";
-		$scope.AccountingType="";
-		$scope.ChargeAmountBasis="";
-		$scope.PaymentTiming="";
-		$scope.GrowthType="";
-		$scope.PaymentDueDay="";
-		$scope.PaymentDueOn="";
+		$scope.paymentType=[];
+		$scope.frequecyType=[];
+		$scope.AccountingType=[];
+		$scope.ChargeAmountBasis=[];
+		$scope.PaymentTiming=[];
+		$scope.GrowthType=[];
+		$scope.PaymentDueDay=[];
+		$scope.PaymentDueOn=[];
 		
-		var paymentType= dataService.gettingJsonData("./jsons/c_paymentType.json");
-		var frequecyType=dataService.gettingJsonData("./jsons/c_frequecyType.json");
-		var AccountingType= dataService.gettingJsonData("./jsons/l_AccountingType.json");
-		var ChargeAmountBasis=dataService.gettingJsonData("./jsons/l_ChargeAmountBasis.json");
-		var PaymentTiming= dataService.gettingJsonData("./jsons/l_PaymentTiming.json");
-		var GrowthType=dataService.gettingJsonData("./jsons/l_GrowthType.json");
-		var PaymentDueDay=dataService.gettingJsonData("./jsons/l_PaymentDueDay.json");
-		var PaymentDueOn=dataService.gettingJsonData("./jsons/l_PaymentDueOn.json");
+		dataService.gettingJsonData("./jsons/c_paymentType.json").
+			then(function(data) {
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].path;
+		        	var res = str.split("\\");
+		        	$scope.paymentType.push(res[2]);
+		        }
+   			 });
+       
+		dataService.gettingJsonData("./jsons/c_frequecyType.json").
+			then(function(data) {
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].path;
+		        	var res = str.split("\\");
+		        	$scope.frequecyType.push(res[2]);
+		        }
+		       	console.log($scope.frequecyType);
+   			 });
 
-		$q.all([paymentType,frequecyType,AccountingType,ChargeAmountBasis,PaymentTiming,
-			GrowthType,PaymentDueDay,PaymentDueOn]).then(
-			function(data){
-				$scope.paymentType=data[0];
-				$scope.frequecyType=data[1];
-				$scope.AccountingType=data[2].result;
-				$scope.ChargeAmountBasis=data[3].result;
-				$scope.PaymentTiming=data[4].result;
-				$scope.GrowthType=data[5].result;
-				$scope.PaymentDueDay=data[6].result;
-				$scope.PaymentDueOn=data[7].result;
-
-				console.log($scope.paymentType); 
-				console.log($scope.frequecyType);
-				console.log($scope.AccountingType);	
-				console.log($scope.ChargeAmountBasis);			
-				console.log($scope.PaymentTiming);				
-				console.log($scope.GrowthType);
-				console.log($scope.PaymentDueDay);	
-				console.log($scope.PaymentDueOn);	
-
-			},function(error){
-
-				console.log("Data has not been receieved");
-
-			});
+		dataService.gettingJsonData("./jsons/l_AccountingType.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.AccountingType.push(str);
+		        }
+		       	console.log($scope.AccountingType);
+   			 });
 
 
-		$scope.paymentAlert,$scope.accountingAlert,$scope.FrequencyAlert,
-				$scope.PeriodStartAlert,$scope.PaymentTimingAlert,$scope.PaymentDueOnAlert,
-				$scope.PaymentDueDayAlert,$scope.AccountingCostCenterAlert=false;
+		dataService.gettingJsonData("./jsons/l_ChargeAmountBasis.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.ChargeAmountBasis.push(str);
+		        }
+		       	console.log($scope.ChargeAmountBasis);
+   			 });
+
+		dataService.gettingJsonData("./jsons/l_PaymentTiming.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.PaymentTiming.push(str);
+		        }
+		       	console.log($scope.PaymentTiming);
+   			 });
+
+		dataService.gettingJsonData("./jsons/l_GrowthType.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.GrowthType.push(str);
+		        }
+		       	console.log($scope.GrowthType);
+   			 });
+
+		dataService.gettingJsonData("./jsons/l_PaymentDueDay.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.PaymentDueDay.push(str);
+		        }
+		       	console.log($scope.PaymentDueDay);
+   			 });
+
+		dataService.gettingJsonData("./jsons/l_PaymentDueOn.json").
+			then(function(success) {
+				var data= success.result;
+		        for(var i=0;i< data.length;i++){
+		        	var str=data[i].value;
+		        	$scope.PaymentDueOn.push(str);
+		        }
+		       	console.log($scope.PaymentDueOn);
+   			 });
 
 
-		$scope.movetoPaymentParams= function()
+		$scope.selectedPaymentType,$scope.selectedAccountType,$scope.selectedFrequencyType,
+			$scope.selectedPeriodStarts,$scope.selectedPaymentTiming,$scope.selectedPaymentDueOn,
+				$scope.selectedPaymentDueDay,$scope.selectedAccountingCost,$scope.selectedGrowth,
+					$scope.selectedFixedGrowth,$scope.selectedNoOfSchedules,$scope.selectedAdjustEveryMonth,
+						$scope.selectedChargeAmount,$scope.selectedContract,$scope.selectedAmountPerBasis="";		
+		
+
+		$scope.totalDetails={};
+
+		$scope.savingData= function()
 		{
+			console.log("Main DATA SAVE");
 			
-		}		
+			
+			// for (var i = 0; i < $scope.totalDetails.length; i++) 
+			// {
+			// 	if ($scope.selectedPaymentType== ) {}
+			// }
+
+			$scope.totalDetails[$scope.selectedPaymentType]=[];
+
+			var details={};
+			details.selectedFrequencyType= $scope.selectedFrequencyType;
+			details.selectedPeriodStarts= $scope.selectedPeriodStarts;
+			details.selectedAccountingCost= $scope.selectedAccountingCost;
+
+			$scope.totalDetails[$scope.selectedPaymentType].push(details);
+
+			console.log($scope.totalDetails);
+			var data= Object.keys($scope.totalDetails);
+			console.log(data);
+			
+
+
+			$scope.selectedPaymentType="";$scope.selectedAccountType,$scope.selectedFrequencyType,
+			$scope.selectedPeriodStarts,$scope.selectedPaymentTiming,$scope.selectedPaymentDueOn,
+				$scope.selectedPaymentDueDay,$scope.selectedAccountingCost,$scope.selectedGrowth,
+					$scope.selectedFixedGrowth,$scope.selectedNoOfSchedules,$scope.selectedAdjustEveryMonth,
+						$scope.selectedChargeAmount,$scope.selectedContract,$scope.selectedAmountPerBasis="";		
+
+		};
+
+		$scope.deleteData= function(key,index)
+		{
+			console.log(index);
+			console.log(key);
+			$scope.delConfirmData= function()
+			{
+				console.log("jsanc");
+				$scope.totalDetails[key].splice(index,1);
+				console.log($scope.totalDetails);
+			}
+		};
+
+		$scope.edit=function(key,index)
+		{
+
+			$scope.dataChange= $scope.totalDetails[key];
+
+			// for (var i = 0; i < $scope.totalDetails[key].length; i++) 
+			// {
+			// 	if(index== $scope.totalDetails[key])
+			// }
+			console.log($scope.dataChange);
+			console.log("edit function");
+			$scope.savingData= function()
+			{
+				var details={};
+				details.selectedFrequencyType= $scope.selectedFrequencyType;
+				details.selectedPeriodStarts= $scope.selectedPeriodStarts;
+				details.selectedAccountingCost= $scope.selectedAccountingCost;	
+			}
+		};	
+
+		$scope.nextModal=function(){
+			$scope.isChecked = true;
+    		return true
+		};
+
 
 
 

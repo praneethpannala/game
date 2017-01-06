@@ -1,5 +1,6 @@
   <!-- Modal -->
    <!-- Modal -->
+
   <div class="modal fade" id="paymentParams" role="dialog">
     <div class="modal-dialog">
     
@@ -10,22 +11,18 @@
           <h4 class="modal-title">Payment Parameters</h4>
         </div>
         <div class="modal-body" style="margin:0px 0px 20px 20px;height: 468px;overflow: auto">
-          
           <div>
             <form class="form-inline">
               
                 <div class="form-group">
                   <h5>Growth Type</h5>
-                   <select class="form-control " style="height: 35px;width: 286px;" ng-model="selected" ng-options="item.id as item.value for item in GrowthType">
+                   <select class="form-control " style="height: 35px;width: 286px;" ng-model="selectedGrowth" ng-options="item for item in GrowthType">
                     </select>
-
-                 </select>
-                
                 </div>
                 
                 <div class="form-group" style="margin-left: 14px;">
                   <h5>Fixed Growth</h5>
-                   <input type="text" class="form-control" style="height: 35px;width: 286px;" placeholder="0">
+                   <input type="text" class="form-control" ng-model="selectedFixedGrowth" style="height: 35px;width: 286px;" placeholder="0">
                 </div>
                 
             </form>
@@ -36,12 +33,12 @@
             
               <div class="form-group">
                 <h5>Number of Schedules</h5>
-                   <input type="text" class="form-control" style="height: 35px;width: 290px" placeholder="0">
+                   <input type="text" class="form-control" ng-model="selectedNoOfSchedules" style="height: 35px;width: 290px" placeholder="0">
               </div>
               
               <div class="form-group" style="margin-left: 14px;">
                 <h5>Adjust Every(x) Months</h5>
-                <input type="text" class="form-control" style="height: 35px;width: 290px;" placeholder="0">
+                <input type="text" class="form-control" ng-model="selectedAdjustEveryMonth" style="height: 35px;width: 290px;" placeholder="0">
 
               </div>
               
@@ -50,26 +47,22 @@
 
 
           <div>
-             <form class="form-inline">
+             <form class="form-inline" novalidate>
             
                 <div class="form-group">
-                  <h5>Charge Amount Basis<span class="glyphicon glyphicon-asterisk" style="color: red"></span></h5>
-                  <select class="form-control" style="width: 200px;height: 35px" ng-model="selected" ng-options="item.id as item.value for item in ChargeAmountBasis">
+                  <h5>Charge Amount Basis <sup><i class="fa fa-asterisk" style="color: red"></i></sup></h5>
+                  <select required class="form-control" style="width: 200px;height: 35px" ng-model="selectedChargeAmount" ng-options="item for item in ChargeAmountBasis">
                     </select>
-                   
-
-                 </select>
-                
                 </div>
               
               <div class="form-group" style="margin-left: 14px;">
                 <h5>Contract Rentable</h5>
-                <input type="text" class="form-control" style="height: 35px;width: 100px;" placeholder="0"><span> square-feet</span>
+                <input type="text" class="form-control" ng-model="selectedContract" style="height: 35px;width: 100px;" placeholder="0"><span> square-feet</span>
               </div>
               
               <div class="form-group" style="margin-left: 14px;">
                 <h5>Amount Per Basis</h5>
-                <input type="text" class="form-control" style="height: 35px;width: 183px;" placeholder="0">
+                <input type="text" class="form-control" ng-model="selectedAmountPerBasis" style="height: 35px;width: 183px;" placeholder="0">
               </div>
 
             </form>
@@ -85,7 +78,7 @@
             <p style="float: left;text-align: center;font-size: 11px;" class="col-md-2" ><i class="fa fa-info-circle" style="font-size: 20px;opacity: 0.5"></i><br>Information</p>
             <p class="col-md-2" style="float: left;text-align: center;font-size: 11px;"><i class="fa fa-calendar-o fa-1x" style="font-size: 20px;color:blue"></i><br>Parameters</p>
             <button type="button" style="margin-right: 25px" class="btn btn-default"  data-toggle="modal" data-target="#myModal" data-dismiss="modal"><</button>
-            <button type="button" style="margin-right: 25px" class="btn btn-default" >Save</button>
+            <button type="button" style="margin-right: 25px" class="btn btn-default" ng-click="savingData()" data-dismiss="modal" >Save</button>
           </div>
           
         </div>
