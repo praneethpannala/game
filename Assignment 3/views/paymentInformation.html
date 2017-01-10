@@ -1,5 +1,5 @@
 <!-- Modal -->
-  <div class="modal fade container-fluid" id="myModal" role="dialog">
+<div class="modal fade container-fluid" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -44,7 +44,7 @@
               <div class="form-group col-md-4">
 
                   <h5>Frequency <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required data-live-search="true" data-live-search-style="startsWith" class="form-control freqDatepick"  ng-model="selectedFrequencyType" ng-options="item for item in frequecyType"></select>
+                  <select required class="form-control freqDatepick"  ng-model="selectedFrequencyType" ng-options="item for item in frequecyType"></select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
               </div>
@@ -67,8 +67,7 @@
               <div class="form-group col-md-4">
 
                   <h5>Payment Timing <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control" ng-model="selectedPaymentTiming" ng-options="item for item in PaymentTiming">
-                    </select>
+                  <select required class="form-control" ng-model="selectedPaymentTiming" ng-options="item for item in PaymentTiming"></select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
               </div>
@@ -82,19 +81,19 @@
 
             <form class="form-inline" novalidate>
             
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4" ng-if='selectedFrequencyType != "Other"'>
 
                   <h5>Payment Due On <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueOn" ng-if="disablePaymentDueOn"  ng-options="item for item in PaymentDueDay">
+                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueOn"  ng-options="item for item in PaymentDueOn">
                   </select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
               </div>
-              
-              <div class="form-group col-md-4">
+
+              <div class="form-group col-md-4" ng-if='(selectedFrequencyType != "Other") && ((selectedFrequencyType == "Monthly")||(selectedPaymentDueOn != "Specific Day of Period"))'>
 
                   <h5>Payment Due Day <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in PaymentDueOn">
+                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  PaymentDueDay">
                   </select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
@@ -130,17 +129,18 @@
 
           <div class="row">
 
-            <p class="col-md-2" ><i class="fa fa-info-circle" style="color:blue"></i><br>Information</p>
-            <p class="col-md-2" style="opacity: 0.5"><i class="fa fa-calendar-o fa-1x" ></i><br>Parameters</p>
-            <button type="button" style="margin-right: 25px" id="payInfoModal" class="btn btn-default" data-backdrop="static" data-keyboard="false" data-toggle="modal" ng-click="nextModal()">></button>
+            <p class="col-md-2"><i class="fa fa-info-circle modal-footer-label-color" ></i><br>Information</p>
+            <p class="col-md-2"><i class="fa fa-calendar-o fa-1x modal-footer-label-opacity" ></i><br>Parameters</p>
+            <button type="button" id="payInfoModal" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false" data-toggle="modal" ng-click="nextModal()" data-dismiss="modal" data-target="#paymentParams">></button>
 
           </div>
           
-        </div>
       </div>
-      
+
     </div>
+      
   </div>
+</div>
 
 
 

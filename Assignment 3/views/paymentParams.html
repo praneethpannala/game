@@ -5,22 +5,22 @@
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content" style="width: 670px;">
+      <div class="modal-content modalContent">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Payment Parameters</h4>
         </div>
-        <div class="modal-body" style="margin:0px 0px 20px 20px;height: 468px;overflow: auto">
+        <div class="modal-body modalBodyMargins">
           <div>
             <form class="form-inline">
               
-                <div class="form-group">
+                <div class="form-group" ng-if='selectedFrequencyType != "Other"'>
                   <h5>Growth Type</h5>
                    <select class="form-control " style="height: 35px;width: 286px;" ng-model="selectedGrowth" ng-options="item for item in GrowthType">
                     </select>
                 </div>
                 
-                <div class="form-group" style="margin-left: 14px;">
+                <div class="form-group" style="margin-left: 14px;" ng-if='selectedFrequencyType != "Other"'>
                   <h5>Fixed Growth</h5>
                    <input type="text" class="form-control" ng-model="selectedFixedGrowth" style="height: 35px;width: 286px;" placeholder="0">
                 </div>
@@ -31,12 +31,12 @@
           <div>
             <form class="form-inline">
             
-              <div class="form-group">
+              <div class="form-group" ng-if='selectedFrequencyType != "Other"'>
                 <h5>Number of Schedules</h5>
                    <input type="text" class="form-control" ng-model="selectedNoOfSchedules" style="height: 35px;width: 290px" placeholder="0">
               </div>
               
-              <div class="form-group" style="margin-left: 14px;">
+              <div class="form-group" style="margin-left: 14px;" ng-if='selectedFrequencyType != "Other"'>
                 <h5>Adjust Every(x) Months</h5>
                 <input type="text" class="form-control" ng-model="selectedAdjustEveryMonth" style="height: 35px;width: 290px;" placeholder="0">
 
@@ -49,13 +49,13 @@
           <div>
              <form class="form-inline" novalidate>
             
-                <div class="form-group">
+                <div class="form-group" ng-if='selectedFrequencyType != "Other"'>
                   <h5>Charge Amount Basis <sup><i class="fa fa-asterisk" style="color: red"></i></sup></h5>
                   <select required class="form-control" style="width: 200px;height: 35px" ng-model="selectedChargeAmount" ng-options="item for item in ChargeAmountBasis">
                     </select>
                 </div>
               
-              <div class="form-group" style="margin-left: 14px;">
+              <div class="form-group" style="margin-left: 14px;" ng-if='selectedFrequencyType != "Other"'>
                 <h5>Contract Rentable</h5>
                 <input type="text" class="form-control" ng-model="selectedContract" style="height: 35px;width: 100px;" placeholder="0"><span> square-feet</span>
               </div>

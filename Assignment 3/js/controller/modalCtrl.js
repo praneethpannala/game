@@ -78,7 +78,7 @@
                 var str = data[i].value;
                 $scope.PaymentDueDay.push(str);
             }
-            console.log($scope.PaymentDueDay);
+            console.log("PaymentDueDay"+$scope.PaymentDueDay);
         });
 
         dataService.gettingJsonData("./jsons/l_PaymentDueOn.json").
@@ -88,7 +88,7 @@
                 var str = data[i].value;
                 $scope.PaymentDueOn.push(str);
             }
-            console.log($scope.PaymentDueOn);
+            console.log("PaymentDueOn"+$scope.PaymentDueOn);
         });
 
 
@@ -112,11 +112,6 @@
         $scope.totalDetails = {};
 
 
-        if ($scope.selectedFrequencyType== "other") {
-        		disablePaymentDueOn= false;
-        		disablePaymentDueDay= false;
-        	}
-
         $scope.savingData = function() {
 
         
@@ -132,7 +127,9 @@
                 details.selectedChargeAmount=$scope.selectedChargeAmount;
 
                 $scope.totalDetails[$scope.selectedPaymentType].push(details);
-            } else {
+            } 
+
+            else {
 
                 $scope.totalDetails[$scope.selectedPaymentType] = [];
 
@@ -158,6 +155,8 @@
             $scope.selectedPaymentDueOn="";
             $scope.selectedPaymentDueDay="";
             $scope.selectedChargeAmount="";
+
+            console.log
 
 
         };
@@ -200,20 +199,16 @@
             };
         };
 
-        $scope.nextModal = function() 
-        {
-        	if($scope.isChecked== false)
-        	{
-        		var myEl = angular.element(document.querySelector('#payInfoModal'));
-				myEl.attr('data-dismiss',"modal");
-				myE1.attr('data-target',"#paymentParams");
-        	}
-        	else
-        	{
-		    	$scope.isChecked = true;
-            	return true
-        	}
-        };
+    //     $scope.nextModal = function() 
+    //     {
+    //     	if($scope.isChecked== false)
+    //     	{
+    //     		var myEl = angular.element(document.querySelector('#payInfoModal'));
+				// myEl.attr('");
+				// myE1.attr(');
+    //     	}
+        	
+    //     };
 
 
 

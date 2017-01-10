@@ -43,3 +43,14 @@ form div p{
 .fa-info-circle,.fa-calendar-o{
 	font-size: 20px;
 }
+
+.modal-footer-label-color{
+	color:blue;
+}
+.modal-footer-label-opacity{
+	opacity: 0.5
+}
+
+.modal-closing-button{
+	margin-right: 25px;
+}
