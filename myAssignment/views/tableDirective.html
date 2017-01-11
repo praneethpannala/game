@@ -1,8 +1,8 @@
-<div data-ng-controller="ModalDemoCtrl as ctrl">
- <div class="tableTemplate">
+<div>
+ <div style="width: 80%;margin-left: 10%;margin-top: 10%">
     <table class = "table">
-      <thead class="tableheadColor">
-        <tr class="tableHeadRow">
+      <thead style="background-color: #EAEAEA;">
+        <tr style="text-align: center;">
           <th></th>
           <th>Frequency Type</th>
           <th>Start Date</th>
@@ -12,7 +12,7 @@
         </tr>
       </thead>
 
-      <tbody data-ng-repeat = '(key,value) in ctrl.totalDetails' >
+      <tbody ng-repeat = '(key,value) in pic.totalDetails' >
      
       <tr class="col-md-12" data-toggle="collapse" data-target="#{{$index}}" class="accordion-toggle">
        <td colspan="5">{{key}}</td>
@@ -25,16 +25,16 @@
         <div class="accordian-body collapse" id="{{$index}}">
          <table class="table table-responsive col-md-12 innerTable">
 
-          <tbody data-ng-repeat="tableData in value">
+          <tbody ng-repeat="tableData in value">
            <tr class="text-center">
             <td class="col-md-2 text-center"><i class="fa fa-hourglass-half" aria-hidden="true"></i></td>
-            <td class="col-md-2  text-center">{{tableData.FrequencyType}}</td>
-            <td class="col-md-2  text-left">{{tableData.PeriodStarts}}</td>
+            <td class="col-md-2  text-center">{{tableData.selectedFrequencyType}}</td>
+            <td class="col-md-2  text-left">{{tableData.selectedPeriodStarts}}</td>
             <td class="col-md-2  text-left">21/7/1985</td>
             <td class="col-md-2">0.00</td>
             <td class="col-md-2 text-center">
-              <i class="col-md-6 fa fa-pencil" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" data-ng-click="ctrl.edit('lg',key,$index)"></i>
-              <i class="col-md-6 fa fa-times" aria-hidden="true" data-toggle="modal" data-target="#deleteModal" data-backdrop="static" data-keyboard="false" data-ng-click="ctrl.delete('sm',key,$index)"></i>
+              <i class="col-md-6 fa fa-pencil" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" ng-click="edit(key,$index)"></i>
+              <i class="col-md-6 fa fa-times" aria-hidden="true" data-toggle="modal" data-target="#deleteModal" data-backdrop="static" data-keyboard="false" ng-click="deleteData(key,$index)"></i>
             </td>
 
            </tr>
@@ -47,17 +47,17 @@
   </tbody>
 
     </table>
-
     
- 
-      <button type="button" class="btn btn-success btn-block" data-ng-click="ctrl.newModal('lg')">ADD</button>
+
+   
+  </div>
+
+    <div ng-controller="ModalDemoCtrl as $ctrl">
+      <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>
+
       
     </div> 
  
-   
- 
-
-   
 
 
 

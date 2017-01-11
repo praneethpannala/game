@@ -54,35 +54,3 @@ form div p{
 .modal-closing-button{
 	margin-right: 25px;
 }
-
-.payParamFirstDataDimension{
-	height: 35px;
-	width: 286px!important;
-}
-
-.deleteModalHeader{
-	border-bottom:none;
-}
-
-.deleteModalFooter{
-	border-top:none;
-}
-
-.tableTemplate{
-	width: 80%;
-	margin-left: 10%;
-	margin-top: 10%;
-}
-
-.tableheadColor{
-	background-color: #EAEAEA;
-}
-
-.tableHeadRow{
-	text-align: center;
-}
-
-.payParamThirdDivData{
-	width: 200px;
-	height: 35px;
-}

@@ -1,0 +1,39 @@
+<!-- Modal -->
+
+      <!-- Modal content-->
+      <div  class="container-fluid">
+      <!-- Modal Header -->
+        <div data-ng-show="values.paymentInfoView">
+            <div data-ng-include src="'./views/paymentInfoContent.html'"></div>
+        </div>
+
+        <div data-ng-show="values.paymentParamsView">
+           <div data-ng-include src="'./views/paymentParamsContent.html'"></div> 
+        </div>
+        
+
+      <div class="modal-footer">
+
+          <div class="row">
+
+            <p class="col-md-2"><i class="fa fa-info-circle modal-footer-label-color" ></i><br>Information</p>
+            <p class="col-md-2"><i class="fa fa-calendar-o fa-1x modal-footer-label-opacity" ></i><br>Parameters</p>
+            <button type="button" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false"  data-ng-click="values.previousModalnext()"><</button>
+            <button type="button" id="payInfoModal" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false" data-ng-click="values.nextModal()">></button>
+            <button type="button" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false" data-ng-click="values.cancel()">Generate</button>
+
+          </div>
+          
+      </div>
+
+    </div>
+      
+ 
+
+
+
+
+
+
+
+

@@ -1,9 +1,7 @@
 <!-- Modal -->
-<div class="modal fade container-fluid" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
+
       <!-- Modal content-->
-      <div class="modal-content modalContent">
+      <div  class="container-fluid" ng-controller="modalDataCtrl as values">
       <!-- Modal Header -->
         <div class="modal-header">
 
@@ -20,15 +18,15 @@
               
                 <div class="form-group col-md-6">
                     <h5>Payment Type <sup><i class="fa fa-asterisk"></i></sup></h5>
-                    <select class="form-control"  ng-model="selectedPaymentType" ng-options="item for item in paymentType"  required>
+                    <select class="form-control"  ng-model="pic.selectedPaymentType" ng-options="item for item in values.paymentType"  required>
                     </select>
 
-                    <p ng-show="isChecked">Please fill out this field</p>
+                    <p ng-show={{div.selectedPaymentType.$valid}}>Please fill out this field</p>
                 </div>
                 
                 <div class="form-group col-md-6">
                     <h5>Accounting Type <sup><i class="fa fa-asterisk"></i></sup></h5>
-                    <select class="form-control" ng-model="selectedAccountType" required ng-options="item for item in AccountingType">
+                    <select class="form-control" ng-model="pic.selectedAccountType" required ng-options="item for item in values.AccountingType">
                     </select>
                     <p ng-show="isChecked">Please fill out this field</p>
                 </div>
@@ -44,7 +42,7 @@
               <div class="form-group col-md-4">
 
                   <h5>Frequency <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control freqDatepick"  ng-model="selectedFrequencyType" ng-options="item for item in frequecyType"></select>
+                  <select required class="form-control freqDatepick"  ng-model="pic.selectedFrequencyType" ng-options="item for item in values.frequecyType"></select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
               </div>
@@ -54,7 +52,7 @@
                   <h5>Period Start Date <sup><i class="fa fa-asterisk"></i></sup></h5>
                   <div class="input-group date freqDatepick" data-provide="datepicker">
 
-                    <input type="text" required class="form-control" ng-model="selectedPeriodStarts" placeholder="mm/dd/yyyy" >
+                    <input type="text" required class="form-control" ng-model="pic.selectedPeriodStarts" placeholder="mm/dd/yyyy" >
                     <div class="input-group-addon">
                         <span><i class="fa fa-calendar-o fa-1x"></i></span>
                     </div>
@@ -67,7 +65,7 @@
               <div class="form-group col-md-4">
 
                   <h5>Payment Timing <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control" ng-model="selectedPaymentTiming" ng-options="item for item in PaymentTiming"></select>
+                  <select required class="form-control" ng-model="pic.selectedPaymentTiming" ng-options="item for item in values.PaymentTiming"></select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
               </div>
@@ -84,7 +82,7 @@
               <div class="form-group col-md-4" ng-if='selectedFrequencyType != "Other"'>
 
                   <h5>Payment Due On <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueOn"  ng-options="item for item in PaymentDueOn">
+                  <select required class="form-control freqDatepick" ng-model="pic.selectedPaymentDueOn"  ng-options="item for item in values.PaymentDueOn">
                   </select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
@@ -93,7 +91,7 @@
               <div class="form-group col-md-4" ng-if='(selectedFrequencyType != "Other") && ((selectedFrequencyType == "Monthly")||(selectedPaymentDueOn != "Specific Day of Period"))'>
 
                   <h5>Payment Due Day <sup><i class="fa fa-asterisk"></i></sup></h5>
-                  <select required class="form-control freqDatepick" ng-model="selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  PaymentDueDay">
+                  <select required class="form-control freqDatepick" ng-model="pic.selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  values.PaymentDueDay">
                   </select>
                   <p ng-show="isChecked">Please fill out this field</p>
 
@@ -102,7 +100,7 @@
               <div class="form-group col-md-4">
 
                   <h5>Accounting Cost Center</h5>
-                  <input type="text" class="form-control freqDatepick" ng-model="selectedAccountingCost" placeholder="0">
+                  <input type="text" class="form-control freqDatepick" ng-model="pic.selectedAccountingCost" placeholder="0">
 
               </div>
               
@@ -139,9 +137,7 @@
 
     </div>
       
-  </div>
-</div>
-
+ 
 
 
 

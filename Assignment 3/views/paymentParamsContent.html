@@ -1,0 +1,72 @@
+  <!-- Modal -->
+   <!-- Modal -->
+
+      <div ng-controller="paymentParamsCtrl as paymentParamData">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payment Parameters</h4>
+        </div>
+        
+        <div class="modal-body modalBodyMargins">
+          <div class="row">
+            <form class="form-inline myForm">
+              
+                <div class="form-group col-md-6" ng-if='!(selectedFrequencyType == "Other")'>
+                  <h5>Growth Type</h5>
+                   <select class="form-control payParamFirstDataDimension" ng-model="values.selectedGrowth" ng-options="item for item in paymentParamData.GrowthType"></select>
+                </div>
+                
+                <div class="form-group col-md-6" ng-if='(selectedFrequencyType != "Other") && (selectedGrowth != "Fixed")'>
+                  <h5>Fixed Growth</h5>
+                   <input type="text" class="form-control payParamThirdDivData" placeholder="0" ng-model="values.selectedFixedGrowth">
+                </div>
+                <!-- 
+                    
+                 -->
+                
+            </form>
+          </div><br>
+
+          <div class="row">
+            <form class="form-inline myForm">
+            
+              <div class="form-group col-md-6" ng-if='selectedFrequencyType != "Other"'>
+                <h5>Number of Schedules</h5>
+                   <input type="text" class="form-control payParamThirdDivData" ng-model="values.selectedNoOfSchedules" placeholder="0">
+              </div>
+              
+              <div class="form-group col-md-6" ng-if='selectedFrequencyType != "Other"'>
+                <h5>Adjust Every(x) Months</h5>
+                <input type="text" class="form-control payParamThirdDivData" ng-model="values.selectedAdjustEveryMonth" placeholder="0">
+
+              </div>
+              
+            </form>
+          </div><br>
+
+
+          <div class="row">
+             <form class="form-inline myForm" novalidate>
+            
+                <div class="form-group col-md-4" ng-if='selectedFrequencyType != "Other"'>
+                  <h5>Charge Amount Basis <sup><i class="fa fa-asterisk" ></i></sup></h5>
+                  <select required class="form-control payParamThirdDivData" ng-model="values.selectedChargeAmount" ng-options="item for item in paymentParamData.ChargeAmountBasis">
+                    </select>
+                </div>
+              
+              <div class="form-group col-md-4" ng-if='selectedFrequencyType != "Other"'>
+                <h5>Contract Rentable</h5>
+                <input type="text" class="form-control payParamThirdDivData" ng-model="values.selectedContract " placeholder="0"><span> square-feet</span>
+              </div>
+              
+              <div class="form-group col-md-4">
+                <h5>Amount Per Basis</h5>
+                <input type="text" class="form-control payParamThirdDivData" ng-model="values.selectedAmountPerBasis " placeholder="0">
+              </div>
+
+            </form>
+          </div><br><br>
+        </div>
+      </div>  
+     
+  
