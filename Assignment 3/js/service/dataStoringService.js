@@ -4,25 +4,25 @@
 
 		var totalDetails = {};
 		var data={};
-		this.paymentInfoData= function(PaymentType,AccountType,
-			FrequencyType,PeriodStarts,PaymentTiming,PaymentDueOn,
-			PaymentDueDay)
+		// Data for storing Payment Info Data
+		this.paymentInfoData= function(result)
 		{	
-			
-			data.PaymentType=PaymentType;
-			data.AccountType= AccountType;
-			data.FrequencyType= FrequencyType;
-			data.PeriodStarts= PeriodStarts;
-			data.PaymentTiming= PaymentTiming;
-			data.PaymentDueOn= PaymentDueOn;
-			data.PaymentDueDay= PaymentDueDay;
-			console.log(data);
-		}
 
-		this.paymentParamData= function(Growth,ChargeAmount)
+			data.PaymentType=result.selectedPaymentType;
+			data.AccountType=result.selectedAccountType;
+			data.FrequencyType=result.selectedFrequencyType;
+			data.PeriodStarts=result. selectedPeriodStarts;
+			data.PaymentTiming=result. selectedPaymentTiming;
+			data.PaymentDueOn=result. selectedPaymentDueOn;
+			data.PaymentDueDay=result. selectedPaymentDueDay;
+			console.log(data);
+			console.log("Result"+result.selectedFrequencyType);
+		}
+		// Function for storing payment Param info
+		this.paymentParamData= function(result)
 		{
-			data.Growth= Growth;
-			data.ChargeAmount= ChargeAmount;
+			data.Growth=result.selectedGrowth;
+			data.ChargeAmount=result.selectedChargeAmount;
 			var PaymentType= data.PaymentType;
 			delete data.PaymentType;
 			console.log(data);
@@ -39,15 +39,36 @@
 				console.log(totalDetails);
 			}
 		}
-
+		// Sending all the details to the view
 		this.gettingAllDetails= function(){
 			return totalDetails;
 		}
 
-		this.deleteData = function(key,index)
+		var index;
+		// Deleting the required details
+		this.removeData = function(data)
 		{
-			totalDetails[key].splice(index, 1);
+			
+			totalDetails[data.key].splice(data.index, 1);
       	}
+      	// Editing the details
+      	this.editingDetails= function(information)
+      	{
+      		index= information.index;
+      		return totalDetails[information.key][information.index];
+      	}
+      	// Saving the edited Details
+      	this.saveEditData= function(result)
+      	{
+      		data.Growth=result.selectedGrowth;
+			data.ChargeAmount=result.selectedChargeAmount;
+			var PaymentType= data.PaymentType;
+			delete data.PaymentType;
+			console.log("Data to be save="+data.FrequencyType);
+			totalDetails[PaymentType][index]= angular.copy(data);
+			console.log(totalDetails);
+      	}
+     
 
 	
 	});

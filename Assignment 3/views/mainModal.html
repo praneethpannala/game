@@ -18,9 +18,10 @@
 
             <p class="col-md-2"><i class="fa fa-info-circle modal-footer-label-color" ></i><br>Information</p>
             <p class="col-md-2"><i class="fa fa-calendar-o fa-1x modal-footer-label-opacity" ></i><br>Parameters</p>
-            <button type="button" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false"  data-ng-click="values.previousModalnext()"><</button>
-            <button type="button" id="payInfoModal" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false" data-ng-click="values.nextModal()">></button>
-            <button type="button" class="modal-closing-button btn btn-default" data-backdrop="static" data-keyboard="false" data-ng-click="values.cancel()">Generate</button>
+            <button type="button" data-ng-show="values.hideBeforeButton"   class="modal-closing-button btn btn-default" data-ng-click="values.previousModalnext()"><</button>
+            <button type="button" data-ng-show="values.hideNextButton" id="payInfoModal" class="modal-closing-button btn btn-default" data-ng-click="values.nextModal()">></button>
+            <button type="button" data-ng-show="values.hideGenerate" class="modal-closing-button btn btn-default" data-ng-click="values.Generate()">Generate</button>
+            <button type="button" data-ng-show="values.hideSave" class="modal-closing-button btn btn-default" data-ng-click="values.save()">Save</button>
 
           </div>
           

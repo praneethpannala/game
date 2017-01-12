@@ -1,5 +1,6 @@
 (function() {
 	"use strict";
+    // paymentInfo ctrl
 	angular.module("myApp").controller("paymentInfoCtrl",['dataService', function(dataService) 
 	 {
 	 	var self={};
@@ -10,6 +11,7 @@
         self.PaymentDueDay = [];
         self.PaymentDueOn = [];
 
+        // Ajax call of C_Payment Type JSON
         dataService.gettingJsonData("./jsons/c_paymentType.json").
         then(function(data) {
             for (var i = 0; i < data.length; i++) {
@@ -18,7 +20,7 @@
                 self.paymentType.push(res[2]);
             }
         });
-
+        // Ajax call of c_frequecyType JSON
         dataService.gettingJsonData("./jsons/c_frequecyType.json").
         then(function(data) {
             for (var i = 0; i < data.length; i++) {
@@ -28,7 +30,7 @@
             }
             console.log(self.frequecyType);
         });
-
+         // Ajax call of l_AccountingType JSON
         dataService.gettingJsonData("./jsons/l_AccountingType.json").
         then(function(success) {
             var data = success.result;
@@ -39,7 +41,7 @@
             console.log(self.AccountingType);
         });
 
-
+         // Ajax call of l_PaymentTiming JSON
       
 
         dataService.gettingJsonData("./jsons/l_PaymentTiming.json").
@@ -51,7 +53,7 @@
             }
             console.log(self.PaymentTiming);
         });
-
+        // Ajax call of l_PaymentDueDay JSON
         dataService.gettingJsonData("./jsons/l_PaymentDueDay.json").
         then(function(success) {
             var data = success.result;
@@ -61,7 +63,7 @@
             }
             console.log("PaymentDueDay"+self.PaymentDueDay);
         });
-
+        // Ajax call of l_PaymentDueOn JSON
         dataService.gettingJsonData("./jsons/l_PaymentDueOn.json").
         then(function(success) {
             var data = success.result;

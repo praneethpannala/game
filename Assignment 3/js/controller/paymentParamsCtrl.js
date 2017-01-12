@@ -6,6 +6,7 @@
 	 	 self.GrowthType = [];
 	 	 self.ChargeAmountBasis = [];
 
+	 	 // Ajax call of l_GrowthType JSON
 	 	 dataService.gettingJsonData("./jsons/l_GrowthType.json").
 	        	then(function(success) {
 	            var data = success.result;
@@ -15,7 +16,7 @@
 	            }
 	            console.log(self.GrowthType);
 	       	});
-
+		// Ajax call of l_ChargeAmountBasis JSON
 	    dataService.gettingJsonData("./jsons/l_ChargeAmountBasis.json").
         then(function(success) {
             var data = success.result;
