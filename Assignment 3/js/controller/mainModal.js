@@ -5,6 +5,11 @@
 	{
 	  var self = {};
 
+	   self.status = {
+	    isFirstOpen: true,
+	    isFirstDisabled: false
+	  };
+
 	  // Total Details of the dash board
 	  self.totalDetails= dataStoringService.gettingAllDetails();
 

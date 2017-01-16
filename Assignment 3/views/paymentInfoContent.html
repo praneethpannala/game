@@ -1,7 +1,7 @@
   <div ng-controller="paymentInfoCtrl as paymentInfoData">
       <div class="modal-header">
 
-        <button type="button" class="close" ng-click="values.closeIt()"  data-dismiss="modal">&times;</button>
+        <button type="button" class="close" ng-click="values.closeIt()"  >&times;</button>
         <h4 class="modal-title">Payment Information</h4>
 
       </div>
@@ -17,14 +17,14 @@
                   <select class="form-control"  ng-model="values.selectedPaymentType" ng-options="item for item in paymentInfoData.paymentType"  required>
                   </select>
 
-                  <p ng-show="showAlertpaymentType">Please fill out this field</p>
+                  <p style="color: red">{{values.z.PaymentType}}</p>
               </div>
               
               <div class="form-group col-md-6">
                   <h5>Accounting Type <sup><i class="fa fa-asterisk"></i></sup></h5>
                   <select class="form-control" ng-model="values.selectedAccountType" required ng-options="item for item in paymentInfoData.AccountingType">
                   </select>
-                  <p ng-show="showAlertAccounting">Please fill out this field</p>
+                  <p style="color: red">{{values.z.AccountType}}</p>
               </div>
               
           </form>
@@ -39,7 +39,8 @@
 
                 <h5>Frequency <sup><i class="fa fa-asterisk"></i></sup></h5>
                 <select required class="form-control freqDatepick"  ng-model="values.selectedFrequencyType" ng-options="item for item in paymentInfoData.frequecyType"></select>
-                <p ng-show="showAlertFrequency">Please fill out this field</p>
+                <p style="color: red">{{values.z.FrequencyType}}</p>
+
 
             </div>
             
@@ -54,7 +55,8 @@
                   </div>
 
                 </div>
-                <p ng-show="showAlertPeriodStart">Please fill out this field</p>
+                <p style="color: red">{{values.z.PeriodStarts}}</p>
+
 
             </div>
 
@@ -62,7 +64,8 @@
 
                 <h5>Payment Timing <sup><i class="fa fa-asterisk"></i></sup></h5>
                 <select required class="form-control" ng-model="values.selectedPaymentTiming" ng-options="item for item in paymentInfoData.PaymentTiming"></select>
-                <p ng-show="showAlertPaymentTiming">Please fill out this field</p>
+                <p style="color: red">{{values.z.PaymentTiming}}</p>
+
 
             </div>
             
@@ -80,7 +83,8 @@
                 <h5>Payment Due On <sup><i class="fa fa-asterisk"></i></sup></h5>
                 <select required class="form-control freqDatepick" ng-model="values.selectedPaymentDueOn"  ng-options="item for item in paymentInfoData.PaymentDueOn">
                 </select>
-                <p ng-show="showAlertPaymentDueOn">Please fill out this field</p>
+                <p style="color: red">{{values.z.PaymentDueOn}}</p>
+
 
             </div>
 
@@ -89,7 +93,8 @@
                 <h5>Payment Due Day <sup><i class="fa fa-asterisk"></i></sup></h5>
                 <select required class="form-control freqDatepick" ng-model="values.selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  paymentInfoData.PaymentDueDay">
                 </select>
-                <p ng-show="showAlertPaymentDueDay">Please fill out this field</p>
+                <p style="color: red">{{values.z.PaymentDueDay}}</p>
+
 
             </div>
 

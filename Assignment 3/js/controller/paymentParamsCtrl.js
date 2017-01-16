@@ -14,7 +14,6 @@
 	                var str = data[i].value;
 	                self.GrowthType.push(str);
 	            }
-	            console.log(self.GrowthType);
 	       	});
 		// Ajax call of l_ChargeAmountBasis JSON
 	    dataService.gettingJsonData("./jsons/l_ChargeAmountBasis.json").
@@ -24,7 +23,6 @@
                 var str = data[i].value;
                 self.ChargeAmountBasis.push(str);
             }
-            console.log(self.ChargeAmountBasis);
         });    	
 
 	    return self;

@@ -28,7 +28,6 @@
                 var res = str.split("\\");
                 self.frequecyType.push(res[2]);
             }
-            console.log(self.frequecyType);
         });
          // Ajax call of l_AccountingType JSON
         dataService.gettingJsonData("./jsons/l_AccountingType.json").
@@ -38,7 +37,6 @@
                 var str = data[i].value;
                 self.AccountingType.push(str);
             }
-            console.log(self.AccountingType);
         });
 
          // Ajax call of l_PaymentTiming JSON
@@ -51,7 +49,6 @@
                 var str = data[i].value;
                 self.PaymentTiming.push(str);
             }
-            console.log(self.PaymentTiming);
         });
         // Ajax call of l_PaymentDueDay JSON
         dataService.gettingJsonData("./jsons/l_PaymentDueDay.json").
@@ -61,7 +58,6 @@
                 var str = data[i].value;
                 self.PaymentDueDay.push(str);
             }
-            console.log("PaymentDueDay"+self.PaymentDueDay);
         });
         // Ajax call of l_PaymentDueOn JSON
         dataService.gettingJsonData("./jsons/l_PaymentDueOn.json").
@@ -71,7 +67,6 @@
                 var str = data[i].value;
                 self.PaymentDueOn.push(str);
             }
-            console.log("PaymentDueOn"+self.PaymentDueOn);
         });
 
 

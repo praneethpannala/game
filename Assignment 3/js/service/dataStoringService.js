@@ -15,8 +15,6 @@
 			data.PaymentTiming=result. selectedPaymentTiming;
 			data.PaymentDueOn=result. selectedPaymentDueOn;
 			data.PaymentDueDay=result. selectedPaymentDueDay;
-			console.log(data);
-			console.log("Result"+result.selectedFrequencyType);
 		}
 		// Function for storing payment Param info
 		this.paymentParamData= function(result)
@@ -25,18 +23,15 @@
 			data.ChargeAmount=result.selectedChargeAmount;
 			var PaymentType= data.PaymentType;
 			delete data.PaymentType;
-			console.log(data);
 
 			if (PaymentType in totalDetails) 
 			{
 				totalDetails[PaymentType].push(angular.copy(data));
-				console.log(totalDetails);
 			} 
 			else 
 			{
 				totalDetails[PaymentType]=[];
 				totalDetails[PaymentType].push(angular.copy(data));
-				console.log(totalDetails);
 			}
 		}
 		// Sending all the details to the view
@@ -64,9 +59,7 @@
 			data.ChargeAmount=result.selectedChargeAmount;
 			var PaymentType= data.PaymentType;
 			delete data.PaymentType;
-			console.log("Data to be save="+data.FrequencyType);
 			totalDetails[PaymentType][index]= angular.copy(data);
-			console.log(totalDetails);
       	}
      
 

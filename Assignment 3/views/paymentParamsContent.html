@@ -52,6 +52,7 @@
                   <h5>Charge Amount Basis <sup><i class="fa fa-asterisk" ></i></sup></h5>
                   <select required class="form-control payParamThirdDivData" ng-model="values.selectedChargeAmount" ng-options="item for item in paymentParamData.ChargeAmountBasis">
                     </select>
+                    <p style="color: red">{{values.z.ChargeAmount}}</p>
                 </div>
               
               <div class="form-group col-md-4" ng-if='selectedFrequencyType != "Other"'>
