@@ -13,21 +13,14 @@
 	    self.selectedPaymentType = "";
         self.selectedAccountType = "";
         self.selectedFrequencyType = "";
-        self.selectedPeriodStarts = "";
+        // self.selectedPeriodStarts = "";
         self.selectedPaymentTiming = "";
         self.selectedPaymentDueOn = "";
         self.selectedPaymentDueDay = "";
         self.selectedGrowth = "";
         self.selectedChargeAmount = "";
        	
-       	// self.message={};
-       	// message.paymentType= self.selectedPaymentType;
-       	// message.AccountType= self.selectedAccountType;
-       	// message.FrequencyType=self.selectedFrequencyType;
-       	// message.PeriodStarts=self.selectedPeriodStarts;
-       	// message.PaymentTiming=self.selectedPaymentTiming;
-       	// message.PaymentDueOn=self.selectedPaymentDueOn;
-       	// message.PaymentDueDay=self.selectedPaymentDueDay;
+
 
         // For sending the editable data to a DataStoringService
         var changedData;
@@ -61,12 +54,12 @@
 
         function modalValidation(data){
         	 var flag=true;
-        	self.z= data;
-        	console.log(self.z);
-        	for (var values in self.z)
+        	self.message= data;
+        	console.log(self.message);
+        	for (var values in self.message)
 			{
-				console.log("Message errors="+ self.z[values]);
-				if(self.z[values] == "Please fill the form" )
+				console.log("Message errors="+ self.message[values]);
+				if(self.message[values] == "Please fill the form" )
 				{
 					flag= false;
 				}
@@ -75,10 +68,13 @@
         }
 
         self.nextModal= function() {
+
+
+
 	        var paymentInfo=validationService.paymentInfoValidation(self);
 	        var flagResult = modalValidation(paymentInfo);
 
-        	if(flagResult == true)
+	       	if(flagResult == true)
         	{
         		self.paymentInfoView=false;
 	        	self.paymentParamsView=true;
@@ -126,20 +122,20 @@
 		// Closing the modal without saving any data
 		self.closeIt = function() {
 			
-				var modalInstance = $uibModal.open({
-		    
-			      templateUrl: 'views/editWarningMessage.html',
-			      backdrop  : 'static',
-		   		  keyboard  : false,
-			      controller:'modalDataCtrl',
-		      	  controllerAs:'values',
-		      	  resolve: {
-			      	information: function(){
-			      		return information;
-			      	}
-			      }
-			      
-			    }); 	
+			var modalInstance = $uibModal.open({
+	    
+		      templateUrl: 'views/editWarningMessage.html',
+		      backdrop  : 'static',
+	   		  keyboard  : false,
+		      controller:'modalDataCtrl',
+	      	  controllerAs:'values',
+	      	  resolve: {
+		      	information: function(){
+		      		return information;
+		      	}
+		      }
+		      
+		    }); 	
 
 		}
 
@@ -154,10 +150,6 @@
 	 		{
 	 			$uibModalInstance.close();
 	 		}
-
-		
-
-
 
 		return self;  
 
