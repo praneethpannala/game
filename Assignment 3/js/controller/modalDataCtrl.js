@@ -2,24 +2,35 @@
 	"use strict";
 
 	// Controller for storing all the data accessed in the input modal
-	 angular.module("myApp").controller("modalDataCtrl", ['$uibModalInstance',
-	  'dataStoringService','information','validationService','$uibModal','$uibModalStack',
+	 angular.module("myApp").controller("modalDataCtrl", 
+	 	['$uibModalInstance','dataStoringService','information',
+	 	'validationService','$uibModal','$uibModalStack',
 	  function($uibModalInstance,dataStoringService,information,
 	  	validationService,$uibModal,$uibModalStack) 
 	 {
 	 	var self={};
 
+	 	self.details={};
+
+	 	self.selectOption= function(name,x)
+	 	{
+	 		self.details[name]=x;
+	 		console.log(self.details);
+	 	}
+
 	 	// For emptying the data
-	    self.selectedPaymentType = "";
-        self.selectedAccountType = "";
-        self.selectedFrequencyType = "";
-        // self.selectedPeriodStarts = "";
-        self.selectedPaymentTiming = "";
-        self.selectedPaymentDueOn = "";
-        self.selectedPaymentDueDay = "";
-        self.selectedGrowth = "";
-        self.selectedChargeAmount = "";
+	    self.details.selectedPaymentType = "";
+        self.details.selectedAccountType = "";
+        self.details.selectedFrequencyType = "";
+        self.details.selectedPeriodStarts = "";
+        self.details.selectedPaymentTiming = "";
+        self.details.selectedPaymentDueOn = "";
+        self.details.selectedPaymentDueDay = "";
+        self.details.selectedGrowth = "";
+        self.details.selectedChargeAmount = "";
        	
+       		 		console.log(self.details);
+
 
 
         // For sending the editable data to a DataStoringService
@@ -28,15 +39,15 @@
        	{
        	
 	       	changedData=dataStoringService.editingDetails(information);
-	       	self.selectedPaymentType= information.key;
-	        self.selectedAccountType = changedData.AccountType;
-	        self.selectedFrequencyType = changedData.FrequencyType;
-	        self.selectedPeriodStarts = changedData.PeriodStarts;
-	        self.selectedPaymentTiming = changedData.PaymentTiming;
-	        self.selectedPaymentDueOn = changedData.PaymentDueOn;
-	        self.selectedPaymentDueDay = changedData.PaymentDueDay;
-	        self.selectedGrowth = changedData.Growth;
-	        self.selectedChargeAmount = changedData.ChargeAmount;
+	       	self.details.selectedPaymentType= information.key;
+	        self.details.selectedAccountType = changedData.AccountType;
+	        self.details.selectedFrequencyType = changedData.FrequencyType;
+	        self.details.selectedPeriodStarts = changedData.PeriodStarts;
+	        self.details.selectedPaymentTiming = changedData.PaymentTiming;
+	        self.details.selectedPaymentDueOn = changedData.PaymentDueOn;
+	        self.details.selectedPaymentDueDay = changedData.PaymentDueDay;
+	        self.details.selectedGrowth = changedData.Growth;
+	        self.details.selectedChargeAmount = changedData.ChargeAmount;
       	}
 
        	
@@ -58,6 +69,7 @@
         	console.log(self.message);
         	for (var values in self.message)
 			{
+				console.log(values);
 				console.log("Message errors="+ self.message[values]);
 				if(self.message[values] == "Please fill the form" )
 				{
@@ -71,7 +83,7 @@
 
 
 
-	        var paymentInfo=validationService.paymentInfoValidation(self);
+	        var paymentInfo=validationService.paymentInfoValidation(self.details);
 	        var flagResult = modalValidation(paymentInfo);
 
 	       	if(flagResult == true)
@@ -82,32 +94,28 @@
 		        self.hideNextButton=false;
 		        self.hideGenerate=true;
 
-		        dataStoringService.paymentInfoData(self);	
+		        dataStoringService.paymentInfoData(self.details);	
         	}
 
         	
         }
+
         // Moving to the previous modal content i.e Payment Information
         self.previousModalnext=function(){
-        	// var paymentParam = validationService.paymentParamValidation(self);
-        	// var flagResult = modalValidation(paymentParam);
-        	// console.log(flagResult);
-        	// if(flagResult == true)
-        	// {
+        
         		self.paymentInfoView=true;
 		        self.paymentParamsView=false;
 		        self.hideBeforeButton=false;
 		        self.hideNextButton=true;
 		        self.hideGenerate=false;
-        	// }
-        	
-
+        
 	    }
+
 	    // Sending the input data of Payment Parameters to Data Storing Service
 	    // Saving all the data into the service and closing the modal
         self.Generate = function () {
 
-        	dataStoringService.paymentParamData(self);
+        	dataStoringService.paymentParamData(self.details);
 
 		    $uibModalInstance.close();
 		}
@@ -139,21 +147,47 @@
 
 		}
 
-			self.ignoreWarning= function()
-	 		{
-	 			$uibModalStack.dismissAll('closing');
-	 			
-	 			
-	 		}
+		self.ignoreWarning= function()
+ 		{
+ 			$uibModalStack.dismissAll('closing'); 			
+ 		}
 
-	 		self.cancelWarning =function()
-	 		{
-	 			$uibModalInstance.close();
-	 		}
+ 		self.cancelWarning =function()
+ 		{
+ 			$uibModalInstance.close();
+ 		}
 
 		return self;  
 
-	 }])
+	 }]);
 })();
 
 
+
+
+
+
+// var fileName=['c_frequecyType','c_paymentType','l_AccountingType','l_ChargeAmountBasis','l_GrowthType','l_PaymentDueDay','l_PaymentDueOn','l_PaymentTiming'];
+//     //key names
+//     var infoValidateNames = ["frequecyType","paymentType","accountingType","periodStartDate",'paymentDueDay',"paymentDueOn","paymentTiming"];
+//     mc.jsonData={}
+//     //ajax call is made here by using immediate invoking function
+//     for(var j=0;j<fileName.length;j++){
+//       (function(i){
+//         jsonService.paymentJson("JSON/jsons/"+fileName[i]+".json").then(function(data) {
+//                   mc.jsonData[fileName[i]] = [];
+//                   // split functionality is done here for the data from the ajax call
+//                   if(fileName[i].charAt(0) === "c" ){
+//                     for(var k=0;k<data.length;k++){
+//                       var array = [];
+//                       array = (data[k].path).split("\\");
+//                       mc.jsonData[fileName[i]].push(array[array.length - 1]);
+//                     }
+//                   }
+//                   else if(fileName[i].charAt(0) === "l"){
+//                     for(var k=0;k<data.result.length;k++){
+//                       mc.jsonData[fileName[i]].push(data.result[k].value);
+//                     }
+//                   }
+//               });})(j)
+//     }

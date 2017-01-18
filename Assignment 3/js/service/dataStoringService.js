@@ -60,6 +60,7 @@
 			var PaymentType= data.PaymentType;
 			delete data.PaymentType;
 			totalDetails[PaymentType][index]= angular.copy(data);
+			console.log(totalDetails);
       	}
      
 

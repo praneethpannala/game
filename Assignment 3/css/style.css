@@ -86,3 +86,12 @@ form div p{
 	width: 200px;
 	height: 35px;
 }
+
+.dropdownButton{
+	border-left: none;
+    font-size: 14px;
+    border-radius: 0px;
+}
+.dropdownInput{
+	border-right:none;
+}

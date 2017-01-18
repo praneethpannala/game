@@ -7,49 +7,55 @@
       </div>
       <!-- Modal Body -->
       <div class="modal-body modalBodyMargins container-fluid" >
-        
-          <div class="form-group col-lg-6 col-md-6">
-            <div class="main-input">
-              <span><input class="form-control input-field" type="text" name="payType" placeholder="select" ng-model="pic.details.paymentType" required></span>
-              <button class="btn btn-secondary btn-class fa fa-angle-down icon-span" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu list-dropdown">
-                <input type="text" placeholder="select" class="search-field" ng-model="test1">
-                <ul ng-repeat="paymentType in mc.jsonData.c_paymentType | filter:test1 track by $index" ng-click="pic.selectOption('paymentType',paymentType)">
-                  <li>{{paymentType}}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-       
+      
 
-        <div class="dropdown">
-          <span><input class="form-control" placeholder="select" type="text"></span><button class="btn dropdown-toggle" type="button" data-toggle="dropdown"> </button>
-          
-
-          <ul class="dropdown-menu"  style="overflow-y: scroll;height:200px">
-            <li><input type="text"></li>  
-            <li ng-repeat="x in paymentInfoData.paymentType">{{x}}</li>
-          </ul>
-        </div>
 
         <div class="row paymentInfoDivHeight">
 
           <form class="form-inline div1" novalidate>
             
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <h5>Payment Type <sup><i class="fa fa-asterisk"></i></sup></h5>
-                <select class="form-control"  ng-model="values.selectedPaymentType" ng-options="item for item in paymentInfoData.paymentType"  required>
-                </select>
+                <!-- <select class="form-control"  ng-model="values.selectedPaymentType" ng-options="item for item in paymentInfoData.paymentType"  required>
+                </select> -->
+                 <div class="input-group dropdown" style="width:200px">
+
+                    <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedPaymentType" placeholder="Search">
+                    <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                      <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                    </div>
+
+                    <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                      <li><input type="text" ng-model="payType"></li>  
+                      <li ng-repeat="x in paymentInfoData.paymentType | filter:payType" ng-click="values.selectOption('selectedPaymentType',x)">{{x}}</li>
+                    </ul>
+
+                  </div>
 
                 <p style="color: red">{{values.message.PaymentType}}</p>
             </div>
             
             <div class="form-group col-md-6">
                 <h5>Accounting Type <sup><i class="fa fa-asterisk"></i></sup></h5>
-                <select class="form-control" ng-model="values.selectedAccountType" required ng-options="item for item in paymentInfoData.AccountingType">
-                </select>
+
+                 <div class="input-group dropdown" style="width:200px">
+
+                    <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedAccountType" placeholder="Search">
+                    <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                      <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                    </div>
+
+                    <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                      <li><input type="text" ng-model="accType"></li>  
+                      <li ng-repeat="x in paymentInfoData.AccountingType | filter:accType" ng-click="values.selectOption('selectedAccountType',x)">{{x}}</li>
+                    </ul>
+
+                  </div>
+              <!--   <select class="form-control" ng-model="values.selectedAccountType" required ng-options="item for item in paymentInfoData.AccountingType">
+                </select> -->
+
                 <p style="color: red">{{values.message.AccountType}}</p>
+            
             </div>
               
           </form>
@@ -63,7 +69,24 @@
             <div class="form-group col-md-4">
 
                 <h5>Frequency <sup><i class="fa fa-asterisk"></i></sup></h5>
-                <select required class="form-control freqDatepick"  ng-model="values.selectedFrequencyType" ng-options="item for item in paymentInfoData.frequecyType"></select>
+
+
+                <div class="input-group dropdown" style="width:200px">
+
+                    <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedFrequencyType" placeholder="Search">
+                    <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                      <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                    </div>
+
+                    <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                      <li><input type="text" ng-model="freqType"></li>  
+                      <li ng-repeat="x in paymentInfoData.frequecyType | filter:freqType" ng-click="values.selectOption('selectedFrequencyType',x)">{{x}}</li>
+                    </ul>
+
+                </div>
+
+               <!--  <select required class="form-control freqDatepick"  ng-model="values.selectedFrequencyType" ng-options="item for item in paymentInfoData.frequecyType"></select> -->
+
                 <p style="color: red">{{values.message.FrequencyType}}</p>
 
 
@@ -74,7 +97,7 @@
                 <h5>Period Start Date <sup><i class="fa fa-asterisk"></i></sup></h5>
                 <div class="input-group date freqDatepick" data-provide="datepicker">
 
-                  <input type="text" required class="form-control" ng-model="values.selectedPeriodStarts" placeholder="mm/dd/yyyy" >
+                  <input type="text" required class="form-control" ng-model="values.details.selectedPeriodStarts" placeholder="mm/dd/yyyy" >
                   <div class="input-group-addon">
                       <span><i class="fa fa-calendar-o fa-1x"></i></span>
                   </div>
@@ -88,7 +111,22 @@
             <div class="form-group col-md-4">
 
                 <h5>Payment Timing <sup><i class="fa fa-asterisk"></i></sup></h5>
-                <select required class="form-control" ng-model="values.selectedPaymentTiming" ng-options="item for item in paymentInfoData.PaymentTiming"></select>
+
+                <div class="input-group dropdown" style="width:200px">
+
+                    <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedPaymentTiming" placeholder="Search">
+                    <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                      <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                    </div>
+
+                    <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                      <li><input type="text" ng-model="payTiming"></li>  
+                      <li ng-repeat="x in paymentInfoData.PaymentTiming | filter:payTiming" ng-click="values.selectOption('selectedPaymentTiming',x)">{{x}}</li>
+                    </ul>
+
+                </div>
+
+               <!--  <select required class="form-control" ng-model="values.selectedPaymentTiming" ng-options="item for item in paymentInfoData.PaymentTiming"></select> -->
                 <p style="color: red">{{values.message.PaymentTiming}}</p>
 
 
@@ -103,21 +141,53 @@
 
           <form class="form-inline" novalidate>
           
-            <div class="form-group col-md-4" ng-if='((values.selectedFrequencyType != "Other") && (values.selectedFrequencyType != "Monthly"))'>
+            <div class="form-group col-md-4" ng-if='((values.details.selectedFrequencyType != "Other") && (values.details.selectedFrequencyType != "Monthly"))'>
 
                 <h5>Payment Due On <sup><i class="fa fa-asterisk"></i></sup></h5>
+
+
+                <div class="input-group dropdown" style="width:200px">
+
+                    <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedPaymentDueOn" placeholder="Search">
+                    <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                      <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                    </div>
+
+                    <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                      <li><input type="text" ng-model="payDueOn"></li>  
+                      <li ng-repeat="x in paymentInfoData.PaymentDueOn | filter:payDueOn" ng-click="values.selectOption('selectedPaymentDueOn',x)">{{x}}</li>
+                    </ul>
+
+                </div>
+<!-- 
                 <select required class="form-control freqDatepick" ng-model="values.selectedPaymentDueOn"  ng-options="item for item in paymentInfoData.PaymentDueOn">
-                </select>
+                </select> -->
                 <p style="color: red">{{values.message.PaymentDueOn}}</p>
 
 
             </div>
 
-            <div class="form-group col-md-4" ng-if='(values.selectedFrequencyType != "Other") && ((values.selectedFrequencyType == "Monthly")|| !(values.selectedPaymentDueOn != "Specific Day of Period"))'>
+            <div class="form-group col-md-4" ng-if='(values.details.selectedFrequencyType != "Other") && ((values.details.selectedFrequencyType == "Monthly")|| !(values.details.selectedPaymentDueOn != "Specific Day of Period"))'>
 
                 <h5>Payment Due Day <sup><i class="fa fa-asterisk"></i></sup></h5>
-                <select required class="form-control freqDatepick" ng-model="values.selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  paymentInfoData.PaymentDueDay">
-                </select>
+
+                <div class="input-group dropdown" style="width:200px">
+
+                  <input type="text" class="form-control dropdownInput" ng-model="values.details.selectedPaymentDueDay" placeholder="Search">
+                  <div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
+                    <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+                  </div>
+
+                  <ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
+                    <li><input type="text" ng-model="payDueDay"></li>  
+                    <li ng-repeat="x in paymentInfoData.PaymentDueDay | filter:payDueDay" ng-click="values.selectOption('selectedPaymentDueDay',x)">{{x}}</li>
+                  </ul>
+
+                </div>
+
+
+               <!--  <select required class="form-control freqDatepick" ng-model="values.selectedPaymentDueDay" ng-disabled="disablePaymentDueDay" ng-options="item for item in  paymentInfoData.PaymentDueDay">
+                </select> -->
                 <p style="color: red">{{values.message.PaymentDueDay}}</p>
 
 

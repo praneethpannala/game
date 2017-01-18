@@ -5,25 +5,9 @@
 	{
 	  var self = {};
 
-	  // self.up=true;
-	  // self.down=false
-	  // self.toggleArrow= function(){
-	  	
-	  // 	if(self.up=true)
-	  // 	{
-	  // 		self.up=false;
-	  // 		self.down=true;
-	  // 	}
-	  // 	else{
-	  // 		self.up=true;
-	  // 		self.down=false;
-	  // 	}
-	    
-	  // }
-	  
-
 	  // Total Details of the dash board
 	  self.totalDetails= dataStoringService.gettingAllDetails();
+	  console.log(self.totalDetails);
 
 	  self.animationsEnabled = true;
 
