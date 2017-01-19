@@ -4,7 +4,7 @@
 	{
 		return {
 			restrict:'EA',
-			templateUrl:'dropdown-template.html',
+			templateUrl:'views/dropdown-template.html',
 			scope: {
               data: '=',
               select:'='

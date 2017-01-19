@@ -12,12 +12,6 @@
 
 	 	self.details={};
 
-	 	self.selectOption= function(name,x)
-	 	{
-	 		self.details[name]=x;
-	 		console.log(self.details);
-	 	}
-
 	 	// For emptying the data
 	    self.details.selectedPaymentType = "";
         self.details.selectedAccountType = "";
@@ -161,33 +155,3 @@
 
 	 }]);
 })();
-
-
-
-
-
-
-// var fileName=['c_frequecyType','c_paymentType','l_AccountingType','l_ChargeAmountBasis','l_GrowthType','l_PaymentDueDay','l_PaymentDueOn','l_PaymentTiming'];
-//     //key names
-//     var infoValidateNames = ["frequecyType","paymentType","accountingType","periodStartDate",'paymentDueDay',"paymentDueOn","paymentTiming"];
-//     mc.jsonData={}
-//     //ajax call is made here by using immediate invoking function
-//     for(var j=0;j<fileName.length;j++){
-//       (function(i){
-//         jsonService.paymentJson("JSON/jsons/"+fileName[i]+".json").then(function(data) {
-//                   mc.jsonData[fileName[i]] = [];
-//                   // split functionality is done here for the data from the ajax call
-//                   if(fileName[i].charAt(0) === "c" ){
-//                     for(var k=0;k<data.length;k++){
-//                       var array = [];
-//                       array = (data[k].path).split("\\");
-//                       mc.jsonData[fileName[i]].push(array[array.length - 1]);
-//                     }
-//                   }
-//                   else if(fileName[i].charAt(0) === "l"){
-//                     for(var k=0;k<data.result.length;k++){
-//                       mc.jsonData[fileName[i]].push(data.result[k].value);
-//                     }
-//                   }
-//               });})(j)
-//     }
