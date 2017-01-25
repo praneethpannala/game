@@ -1,0 +1,30 @@
+.homeImage{
+	background-image: url(../images/homeImage.jpg);
+    height: 588px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+.titlePosition{
+   padding: 100px 0px 0px 160px;
+}
+
+md-card img{
+	height: 200px
+}
+
+.toursButton{
+	color: rgb(255, 255, 255);
+    background-color: rgb(255, 159, 28);
+    border-color: rgb(255, 159, 28);
+}
+
+.whySunTravelImage{
+	background-image: url(../images/whySunTravel.jpg);
+    height: 588px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

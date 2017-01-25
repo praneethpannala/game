@@ -1,9 +1,8 @@
 (function() {
-	"use strict";
+    "use strict";
     // paymentInfo ctrl
-	angular.module("myApp").controller("paymentInfoCtrl",['dataService', function(dataService) 
-	 {
-	 	var self={};
+    angular.module("myApp").controller("paymentInfoCtrl", ['dataService', function(dataService) {
+        var self = {};
         self.paymentType = [];
         self.frequecyType = [];
         self.AccountingType = [];
@@ -29,7 +28,7 @@
                 self.frequecyType.push(res[2]);
             }
         });
-         // Ajax call of l_AccountingType JSON
+        // Ajax call of l_AccountingType JSON
         dataService.gettingJsonData("./jsons/l_AccountingType.json").
         then(function(success) {
             var data = success.result;
@@ -39,8 +38,8 @@
             }
         });
 
-         // Ajax call of l_PaymentTiming JSON
-      
+        // Ajax call of l_PaymentTiming JSON
+
 
         dataService.gettingJsonData("./jsons/l_PaymentTiming.json").
         then(function(success) {
@@ -72,5 +71,5 @@
 
         return self;
 
-	 }]);	
+    }]);
 })();

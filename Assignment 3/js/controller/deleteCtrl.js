@@ -1,29 +1,30 @@
 (function() {
-	"use strict";
-	// Controller For Deleting the data
-	angular.module('myApp').controller('deleteCtrl',['$uibModalInstance',
-	  'dataStoringService','deletingData',function($uibModalInstance,
-	  	dataStoringService,deletingData)
-	  {
-	  	var self={};
+    "use strict";
+    // Controller For Deleting the data
+    angular.module('myApp').controller('deleteCtrl', ['$uibModalInstance',
+        'dataStoringService', 'deletingData',
+        function($uibModalInstance,
+            dataStoringService, deletingData) {
+            var self = {};
 
-	  	// Confirmation of deletion
-	  	self.delConfirmData = function(){
-	  		
-			dataStoringService.removeData(deletingData);
+            // Confirmation of deletion
+            self.delConfirmData = function() {
 
-		    $uibModalInstance.close();
-		}  
+                dataStoringService.removeData(deletingData);
 
-		// Closing the modal without deleting any data 
+                $uibModalInstance.close();
+            }
 
-		self.closeDeleteModal= function(){
+            // Closing the modal without deleting any data 
 
-			$uibModalInstance.close();
-		}
+            self.closeDeleteModal = function() {
 
-		return self;
+                $uibModalInstance.close();
+            }
 
-	  }]);
+            return self;
+
+        }
+    ]);
 
 })();

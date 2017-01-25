@@ -1,97 +1,80 @@
-.modalContent{
-	width: 670px;
+.modalContent {
+    width: 670px;
 }
-
-.modalBodyMargins{
-	margin: 0px 0px 20px 20px;
-	height: 468px;
-	overflow: auto;
+.modalBodyMargins {
+    margin: 0px 0px 20px 20px;
+    height: 468px;
+    overflow: auto;
 }
-
-.paymentInfoDivHeight{
-	height: 100px;
+.paymentInfoDivHeight {
+    height: 100px;
 }
-
-.fa-asterisk{
-	color: red;
+.fa-asterisk {
+    color: red;
 }
-
-.div1 div select{
-	width:290px;
-	height:35px;
+.div1 div select {
+    width: 290px;
+    height: 35px;
 }
-
-form div p{
-	color:red;
+form div p {
+    color: red;
 }
-
-.freqDatepick{
-	width:188px;
-	height:35px;
+.freqDatepick {
+    width: 188px;
+    height: 35px;
 }
-
-.textarea{
-	width:600px;height: 55px
+.textarea {
+    width: 600px;
+    height: 55px
 }
-
-.modal-footer .row p{
-	float: left;
-	text-align: center;
-	font-size: 11px;
+.modal-footer .row p {
+    float: left;
+    text-align: center;
+    font-size: 11px;
 }
-
-.fa-info-circle,.fa-calendar-o{
-	font-size: 20px;
+.fa-info-circle,
+.fa-calendar-o {
+    font-size: 20px;
 }
-
-.modal-footer-label-color{
-	color:blue;
+.modal-footer-label-color {
+    color: blue;
 }
-.modal-footer-label-opacity{
-	opacity: 0.5
+.modal-footer-label-opacity {
+    opacity: 0.5
 }
-
-.modal-closing-button{
-	margin-right: 25px;
+.modal-closing-button {
+    margin-right: 25px;
 }
-
-.payParamFirstDataDimension{
-	height: 35px;
-	width: 286px!important;
+.payParamFirstDataDimension {
+    height: 35px;
+    width: 286px!important;
 }
-
-.deleteModalHeader{
-	border-bottom:none;
+.deleteModalHeader {
+    border-bottom: none;
 }
-
-.deleteModalFooter{
-	border-top:none;
+.deleteModalFooter {
+    border-top: none;
 }
-
-.tableTemplate{
-	width: 80%;
-	margin-left: 10%;
-	margin-top: 10%;
+.tableTemplate {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
 }
-
-.tableheadColor{
-	background-color: #EAEAEA;
+.tableheadColor {
+    background-color: #EAEAEA;
 }
-
-.tableHeadRow{
-	text-align: center;
+.tableHeadRow {
+    text-align: center;
 }
-
-.payParamThirdDivData{
-	width: 200px;
-	height: 35px;
+.payParamThirdDivData {
+    width: 200px;
+    height: 35px;
 }
-
-.dropdownButton{
-	border-left: none;
+.dropdownButton {
+    border-left: none;
     font-size: 14px;
     border-radius: 0px;
 }
-.dropdownInput{
-	border-right:none;
+.dropdownInput {
+    border-right: none;
 }

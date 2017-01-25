@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body ng-app="myApp" ng-cloak >
+
+
+  <div layout="column" layout-fill class="homeImage" >
+    
+    <md-toolbar style="background: transparent;">
+
+      <div class="md-toolbar-tools" >
+        <span style="color: black">Sun Travel</span>
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+        <md-nav-bar md-selected-nav-item="currentNavItem">
+          <md-nav-item md-nav-href="#page1">Page One</md-nav-item>
+          <md-nav-item md-nav-href="#page2">Page Two</md-nav-item>
+          <md-nav-item md-nav-href="#page3">Page Three</md-nav-item>
+        </md-nav-bar>
+        
+      </div>
+
+    </md-toolbar>
+
+    <div class="titlePosition">
+      <h1 class="md-display-3">Enjoy Your Dream Vacation</h1>
+      <h3>Travel to the any corner of the world, without going around in circles.</h3>
+    </div> 
+   
+  </div>
+
+  <div layout-padding layout="column">
+
+    <div layout="row">
+      
+      <md-card flex>      
+          <img src="images/turkey.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>Turkey</md-button>
+          <md-button>$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card flex>      
+          <img src="images/spain.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>Spain</md-button>
+          <md-button>$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card flex>      
+          <img src="images/london.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>London</md-button>
+          <md-button >$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      
+      
+    </div>
+
+    <div layout="row">
+      
+      <md-card flex>      
+          <img src="images/easternEurope.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>Eastern Europe</md-button>
+          <md-button>$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card flex>      
+          <img src="images/italy.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>Italy</md-button>
+          <md-button>$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card flex>      
+          <img src="images/swissAlps.jpg" class="md-card-image" alt="image caption">
+          
+        <md-card-actions layout="row" layout-align="space-between">
+          <md-button>Swiss Alps</md-button>
+          <md-button >$2000</md-button>
+        </md-card-actions>
+      </md-card>
+
+      
+      
+    </div>
+    <div layout="row" layout-align="center center" flex="33">
+      <md-button class="toursButton" >View More</md-button>
+    </div>
+  </div>
+
+
+  <div class="whySunTravelImage" layout="column">
+
+    <div layout="row">
+      <md-card layout="row" flex>
+          hjsbkj
+      </md-card>
+      
+      <md-card layout="row" flex>
+          hjsbkj
+      </md-card>
+      
+      <md-card layout="row" flex>
+          hjsbkj
+      </md-card>
+    </div>
+    
+    <div layout="row">
+      <md-card layout="row">
+          hjsbkj
+      </md-card>
+      
+      <md-card layout="row">
+          hjsbkj
+      </md-card>
+      
+      <md-card layout="row">
+          hjsbkj
+      </md-card>
+    </div>  
+
+  </div>
+
+ 
+
+
+
+
+
+  
+
+    <!-- Angular min file -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!-- Angular libraries required to support angular material -->
+    <!-- Angular animate file -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <!-- Angular Aria Min file -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script>
+      angular.module("myApp",['ngMaterial']);
+    </script>
+
+</body>
+</html>

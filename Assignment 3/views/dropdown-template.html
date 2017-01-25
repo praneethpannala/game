@@ -1,16 +1,16 @@
- <div class="input-group dropdown" style="width:200px">
+<div class="input-group dropdown" style="width:200px">
 
 	<input type="text" class="form-control dropdownInput" ng-model="select" placeholder="Search">
 	<div class="input-group-btn dropdown-toggle" data-toggle="dropdown">
-	  <button class="btn btn-default dropdownButton"  type="button"><i class="fa fa-angle-down"></i></button>
+		<button class="btn btn-default dropdownButton" type="button"><i class="fa fa-angle-down"></i>
+		</button>
 	</div>
 
-	<ul class="dropdown-menu"  style="overflow-y: auto;max-height: 200px">
-	  <li><input type="text" ng-model="searchFilter"></li>  
-	  <li ng-repeat="x in data | filter:searchFilter" ng-click="selectOption(x)">{{x}}</li>
+	<ul class="dropdown-menu" style="overflow-y: auto;max-height: 200px">
+		<li>
+			<input type="text" ng-model="searchFilter">
+		</li>
+		<li ng-repeat="x in data | filter:searchFilter" ng-click="selectOption(x)">{{x}}</li>
 	</ul>
 
 </div>
-
-
-
